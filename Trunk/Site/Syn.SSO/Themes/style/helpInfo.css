@@ -1,0 +1,60 @@
+/*create date 01/07/2011*/
+/*revised date 01/10/2011*/
+
+
+.helpInfo{
+	border: 1px solid #b6b6b6;
+	height: 130px;
+	margin: 5px 15px;
+	padding: 10px 20px;
+	width: 905px;
+}
+
+.helpInfo .list{
+	display: inline-block;
+}
+
+.helpInfo .list div{
+	padding-left: 36px;
+	padding-top: 50px;
+}
+
+.helpInfo .list a{
+	background: url(../images/arrow_b.gif) no-repeat 0px 3px;
+	color: #5a5a5a;
+	display: block;
+	line-height: 20px;
+	text-indent: 15px;
+}
+
+.helpInfo .list a:hover{
+	color: #969696;
+}
+
+.helpInfo .safe{
+	background: url(../images/helpInfo/safe.jpg) no-repeat;
+	height: 120px;
+	width: 211px;
+}
+
+.helpInfo .pay_1{
+	background: url(../images/helpInfo/pay_1.jpg) no-repeat;
+	height: 120px;
+	width: 211px;
+}
+
+.helpInfo .pay_2{
+	background: url(../images/helpInfo/pay_2.jpg) no-repeat;
+	height: 120px;
+	width: 211px;
+}
+
+.helpInfo .guide{
+	background: url(../images/helpInfo/guide.jpg) no-repeat;
+	height: 120px;
+	width: 211px;
+}
+
+
+
+

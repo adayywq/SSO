@@ -1,0 +1,123 @@
+﻿/* 用户中心 */
+.userBasic{border-right:1px solid #DCDCDC;padding:0 0 0;margin:0 0 20px;float:left;width:50%;}
+.userBasic h1{font-size:16px;}
+.userBasic dt{width:130px;}
+.userBasic .avatar{border:1px solid #DDDDDD;padding:1px;width:110px;}
+.userBasic dd{padding-top:0;}
+.userBasic dd span{padding-right:40px;}
+.userBasic dd div{padding:8px 0;}
+.userBasic dd .userName{font-size:14px;}
+.userEdit{padding-left:10px;}
+.userEdit dl{padding:0 0 20px;}
+.userEdit dl dt{padding-top:2px;padding-right:20px;}
+.userEdit dl dd span{padding:0 14px 0 0;}
+.alltips{float:left;width:40%;padding:0 0 10px 30px;}
+.alltips a{color:blue;}
+.alltips h4{margin:0;font-size:12px;padding:14px 0 6px;}
+.useractionbtn{padding:10px 0 0;}
+.useitem{padding:10px 0 0;}
+
+#menu h2,
+#menu h3{padding:0;margin:0;}
+#menu .box,
+#menu .up,
+#menu .down,
+#menu h2 a,
+#menu h3{background-image: url(images/menu.gif);background-repeat: no-repeat;}
+#menu .box{background-position: 0 0;background-repeat: repeat-y;}
+#menu .up,
+#menu .down{height:4px;line-height:0;font-size:0;overflow:hidden;}
+#menu .up{background-position: -248px 0;}
+#menu .down{background-position: -248px -38px;}
+#menu h2{padding-bottom:5px}
+#menu h2 a{background-position: -250px -69px;display:block;height:20px;width:118px;font-size:14px;color:#fff;padding:10px 0 0 32px;}
+#menu h2 a:hover{text-decoration:none;}
+#menu h3{background-position: -251px -126px;color:#075D16;height:18px;font-size:12px;padding:7px 0 0 20px;}
+#menu li{height:26px;border-bottom:1px solid #E4ECF1;}
+#menu li a{display:block;padding:7px 0 0 20px;height:19px}
+#menu li a{padding-top:8px\9;height:18px\9;}
+#menu li a:hover{background-color:#98D047;color:#fff;}
+#menu ul{margin:0 3px 0 1px;}
+#menu .impt{background-color:#FFFBEA;}
+/* 找回密码 */
+#framebox{float:left;width:750px;margin-left:10px;display:inline;}
+#rightside{float:right;width:188px;}
+#framebox .box,
+#framebox .head,
+#framebox .bottom{background-image: url(images/frame.gif);background-repeat: no-repeat;}
+#framebox .head{background-position: -851px 0;height:60px;}
+#framebox .head h2{color:#328916;font-size:20px;padding:22px 0 0 22px;margin:0;}
+#framebox .bottom{background-position: -851px bottom;height:12px;line-height:0;font-size:0;overflow:hidden;}
+#framebox .box{background-position: 0 0;background-repeat: repeat-y;padding:25px 20px 0;}
+#framebox .formbox dl{padding:5px 0 25px;}
+#framebox .formbox dt{width:130px;font-size:14px;padding-top:10px;text-align:right;}
+#framebox .formbox dd div{padding:4px 0 0;}
+#framebox .textinput{padding-top:4px;padding-bottom:4px;}
+.faqBox h3,
+.faqBox .bottom{background-image: url(images/faqbox.gif);background-repeat:no-repeat;}
+.faqBox h3{height:22px;padding:0;margin:0;padding:8px 0 0 15px;}
+.faqBox .box{background-color:#F6FBFA;border-left:1px solid #B8D5D0;border-right:1px solid #B8D5D0;padding:0 8px;}
+.faqBox .bottom{background-position: 0 bottom;height:4px;line-height:0;font-size:0;}
+.faqBox ul{padding:4px 0;}
+.faqBox ul li{background-image: url(images/arrow.gif);background-repeat:no-repeat;background-position: 7px -60px;padding:5px 16px;}
+.backTologin{font-size:14px;padding:20px 0 0;}
+
+.custom-item     {height:100%;overflow:hidden;height:114px;}
+.custom-item li  {float:left;width:49.9%;display:inline;margin:0 0 10px;height:100px;position:relative;}
+.custom-item li.item2  {width:49.9%;}
+.custom-item li.item3  {width:33.3%;}
+.custom-item li.item4  {width:24.9%;}
+.custom-item dd  {padding:14px 0 0;word-break:break-all;float:none;height:70px;}
+.custom-item dt  {width:84px;}
+.custom-item h2  {color:#005590;font-size:14px;}
+.custom-item dl  {cursor:pointer;padding:10px;height:100%;overflow:hidden;position:relative;z-index:2;margin-right:20px;}
+.custom-item .desc{color:#929699;padding:4px 0 0;}
+.custom-item dl .ico-act{position:absolute;right:0;top:0;display:none;}
+.item-a,
+.item-a span     {background-image: url(images/itembg.gif);background-repeat:no-repeat;display:block;height:100%;}
+.item-a          {background-position: right -186px;cursor:pointer;position:relative;margin-bottom:-96px;padding-right:6px;z-index:1;margin-right:20px;}
+.item-a span     {background-position: 0 -186px;}
+.item-added      {background-position: right -360px;}
+.item-added span {background-position: 0 -360px;}
+.item-a-hover    {background-position: right 0;}
+.item-a-hover span{background-position: 0 0;}
+
+/* 我的帐户信息 */
+.panel{border:1px solid #ccc;border-radius:4px;margin:10px 0 5px 0;overflow:hidden;height:100%;}
+.panel .head{background:none;border-bottom:1px solid #ccc;}
+.panel .head div{padding:12px  0 0 10px;font-weight:bold;}
+.panel .head img{float:left;margin:-6px 10px 0 0;}
+.panel th{text-align:right;}
+.panel td a{color:blue;}
+.panel tr:hover{background-color:#FAFBFC;}
+.panel td .icon{background:none;position:relative;top:-1px;}
+
+.table-userinfo{border-radius:4px;border:1px solid #E6E6E6;}
+.table-userinfo .thead   {background:url(images/thead.png) 0 0 repeat-x transparent;}
+.table-userinfo td       {border-right:1px solid #E6E6E6;border-left:1px solid #fff;color:#666;padding:10px;border-bottom:1px solid #E6E6E6;}
+.table-userinfo td.last  {border-right:0;}
+.table-userinfo .end td  {border-bottom:0;}
+.table-userinfo .thead td{color:#333;}
+.table-userinfo tr.erow{background-color:#FAFBFC;}
+.table-userinfo td a{color:#005EA7;}
+.table-userinfo td .icon{background:none;position:relative;top:-1px;}
+
+.ol-tips li{line-height:20px;}
+.a-totlebtn{position:absolute;right:0;top:15px;}
+.eaccount li{border-bottom:1px dotted #ccc;padding:0 0 5px 0;margin:0 0 10px 0;}
+.etr td,
+.etr th{border-top:1px solid #ccc;}
+
+.tabbox{border-bottom:2px solid #F84600;height:27px;}
+.tabbox li{cursor:pointer;float:left;height:27px;padding:0 4px 0 0;}
+.tabbox li i,
+.tabbox li s{background-image: url("images/tab.png");float:left;height:27px;width:4px;line-height:0;font-size:0;}
+.tabbox li i{background-position:-4px 0;}
+.tabbox li span{background-image: url("images/tab.png");background-position:0 -27px;float:left;height:21px;padding:6px 6px 0;}
+.tabbox .hover span{background-position:0 -54px;}
+.tabbox .hover i   {background-position:-12px 0;}
+.tabbox .hover s   {background-position:-8px 0;}
+.tabbox .active span{background-position:0 -81px;color:#fff;font-weight:bold;}
+.tabbox .active i   {background-position:-20px 0;}
+.tabbox .active s   {background-position:-16px 0;}
+.tabbox .tabbutton{float:right;padding:0;}

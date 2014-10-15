@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Logout</title>
+</head>
+<body>
+<input type="hidden" id="connUrl" value="@ViewBag.connUrl" />
+</body>
+</html>
+
+<script type="text/javascript">
+    window.parent.location.href = document.getElementById("connUrl").value;
+</script>

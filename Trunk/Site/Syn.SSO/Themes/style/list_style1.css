@@ -1,0 +1,71 @@
+﻿/*create date 01/07/2011*/
+/*revised date 01/13/2011*/
+
+
+
+.adminBody .left .tree_1, .adminBody .left .tree_1_bottom{
+	background: url(../images/title_left.png) no-repeat 0px 0px;color: #ffffff;	cursor: pointer;	font-weight: bold;	height: 28px;	line-height: 28px;	margin-top: 5px;padding: 0 5px;text-indent: 5px;
+width: 210px;
+}
+
+.adminBody .left .tree_1_bottom{
+	background-position: 0 -35px;height: 5px;	margin-bottom: 5px;margin-top: 0;line-height:5px;overflow:hidden;font-size:0;
+}
+
+.adminBody .left .box{
+	background: url(../images/box_bg.png) no-repeat #eaeaea;
+	overflow: hidden;
+	padding: 2px 0px;
+	width: 220px;
+}
+
+.adminBody .left .box .tree_2, .adminBody .left .box .select_2, .adminBody .left .box .tree_2_low{
+	background: url(../images/tree_2.gif) no-repeat 5px 9px;
+	border-top: 1px dotted #b6b6b6;
+	color: #5d761b;
+	cursor: pointer;
+	font-weight: bold;
+	height: 25px;
+	line-height: 25px;
+	margin: 0px 2px;
+	text-indent: 15px;
+}
+
+.adminBody .left .box .tree_2_low{
+	background-color: #f8f8f8;
+}
+
+.adminBody .left .box .tree_2:hover, .adminBody .left .box .tree_2_low:hover, .adminBody .left .box .select_2{
+	background-color: #b0cc5d;
+}
+
+.adminBody .left .box .tree_3, .adminBody .left .box .select_3{
+	background: url(../images/tree_3.gif) no-repeat 15px 7px #ffffff;
+	border-top: 1px dotted #d5d5d5;
+	color: #5a5a5a;
+	cursor: pointer;
+	height: 20px;
+	line-height: 20px;
+	margin: 0px 3px;
+	text-indent: 28px;
+}
+
+.adminBody .left .box .tree_3:hover, .adminBody .left .box .select_3{
+	background: url(../images/tree_3_hover.gif) no-repeat 15px 7px #ffffff;color: #405e20;font-weight: bold;text-decoration: underline;
+}
+.toggleload{
+	padding:8px 0;margin:0 10px;
+}
+.toggleload img{
+	vertical-align:middle;margin:-2px 4px 0 0;
+}
+
+.tree_4{
+	background-color:#fff;margin:0 3px;
+}
+.tree_4 ul{
+	padding:4px 0 ;
+}
+.tree_4 li a{
+	display:block;height:20px;padding:0 0 0 28px;
+}

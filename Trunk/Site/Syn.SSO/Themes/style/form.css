@@ -1,0 +1,224 @@
+﻿/*create date 01/07/2011*/
+/*revised date 01/13/2011*/
+
+input{
+	margin: 0;padding: 0;font-family:arial;
+}
+
+.btn_green_b, .btn_green_b .btn_green_b_right, .btn_green_s, .btn_green_s .btn_green_s_right,
+.btn_gray_s, .btn_gray_s .btn_gray_s_right,
+.moreLinkbtn,.moreLinkbtn span,
+.btn_small_s,.btn_small_s .btn_small_s_right,.readCardIco{
+	background-image: url(../images/buttons.gif);background-repeat:no-repeat;vertical-align:baseline;
+}
+.btn_green_b, .btn_green_b .btn_green_b_right, .btn_green_s, .btn_green_s .btn_green_s_right,
+.btn_gray_s, .btn_gray_s .btn_gray_s_right{
+	background-position:0 0;color: #ffffff;cursor: pointer;display: inline-block;height: 34px;line-height: 30px;padding: 0 5px;text-align: center;text-indent: 10px;width: auto;
+}
+
+.btn_green_b, .btn_green_s,.btn_gray_s{
+	position: relative;
+}
+
+.btn_green_b{
+	margin-right: 25px;
+}
+
+.btn_green_s,.btn_gray_s{
+	margin-right: 20px;
+}
+
+.btn_green_b .btn_green_b_right, .btn_green_s .btn_green_s_right,
+.btn_gray_s .btn_gray_s_right{
+	position: absolute;right: -23px;top: 0px;
+}
+
+.btn_green_s .btn_green_s_right,
+.btn_gray_s .btn_gray_s_right{
+	right: -19px;
+}
+
+.btn_green_b .btn_green_b_right{
+	background-position: -205px -42px;width: 13px;
+}
+
+.btn_green_s,.btn_green_s .btn_green_s_right,
+.btn_gray_s,.btn_gray_s .btn_gray_s_right{
+	height: 26px;line-height: 22px;margin-top: -2px;text-indent: 5px;
+}
+.btn_green_s,.btn_green_s .btn_green_s_right,.btn_gray_s,.btn_gray_s .btn_gray_s_right{
+	line-height: 26px\9;
+}
+.btn_green_s, .btn_green_s_right{background-position: 0px -160px;}
+.btn_gray_s, .btn_gray_s_right{background-position: 0px -228px;}
+.btn_green_s .btn_green_s_right,
+.btn_gray_s .btn_gray_s_right{
+	margin-top: 0;width: 9px;
+}
+.btn_green_s .btn_green_s_right{background-position: -209px -192px;}
+.btn_gray_s .btn_gray_s_right{background-position: -209px -260px;}
+
+.btn_green_b:hover{
+	background-position: 0px -80px;
+}
+
+.btn_green_b:hover .btn_green_b_right{
+	background-position: -205px -122px;
+}
+.btn_green_s a,.btn_gray_s a{color:#fff;}
+.btn_green_s a:hover,.btn_gray_s a:hover,.btn_small_s a:hover{text-decoration:none;}
+
+.turnback,.edit,.btn_print,.btn_impor{
+	background-image: url(../images/icon.gif);background-repeat:no-repeat;
+}
+.turnback{
+	background-position:0 2px;padding-left:16px;
+}
+.edit{background-position:0 -27px;color:#fff;padding-left:14px;margin-left:20px;}
+.btn_print{background-position:0 -67px;padding-left:22px;}
+.btn_impor{background-position:0 -106px;padding-left:20px;}
+
+.moreLinkbtn,.moreLinkbtn span{
+	display: inline-block;
+}
+.moreLinkbtn{background-position:0 -291px;padding-left:37px;}
+.moreLinkbtn span{background-position:right -291px;height:21px;padding:8px 20px 0 0;}
+
+.btn_small_s .btn_small_s_right,.btn_small_s{
+	background-position:0 -326px;color: #ffffff;cursor:pointer;display:inline-block;height: 20px;padding: 0 0 0 6px;text-align: center;width: auto;
+}
+.btn_small_s .btn_small_s_right{background-position:right -326px;height:20px;padding:0 6px 0 0;vertical-align:baseline;}
+.btn_small_s a{color:#535353;vertical-align:top;display:inline-block;line-height:20px;}
+*html .btn_small_s a{line-height:24px;}
+
+.searchmore{background-position:0 -87px;cursor:pointer;}
+
+
+/* small button */
+.small_back,.small_back span,
+.small_add,.small_add span{
+	background-image:url('../images/small_btn.gif');background-repeat:no-repeat;color:#fff;display:inline-block;height:24px;cursor:pointer;
+}
+.small_back:hover,.small_add:hover{
+	text-decoration:none;
+}
+.small_back,.small_add{
+	margin-left:10px;
+}
+.small_back span,.small_add span{
+	padding:0 0 0 10px; height:24px; position:relative;line-height:22px;left:-10px;
+}
+*html .small_back span,.small_add span{
+	line-height:24px;
+}
+.small_back{
+	background-position:right 0;
+}
+.small_back span{
+	background-position:0 0;
+}
+.small_add{
+	background-position:right -26px;
+}
+
+.small_add span{
+	background-position:0 -26px;
+}
+
+.input{
+	background-image:url('../images/input.gif');background-repeat:no-repeat;background-position:0 0;background-color:none;height:22px;border:none;width:112px;padding:2px 0 0 4px; font-size:100%;
+}
+*html .input{
+	padding-top:4px;height:20px;
+}
+.select{border:1px solid #CECECE;height:20px;float:left;}
+.select .value{color:#666;float:left;height:16px;padding:4px 4px 0;}
+.select .ico{
+	background-image:url('../images/darrow.gif');background-repeat:no-repeat;background-position:0 0;float:left;height:20px;width:14px;overflow:hidden;text-indent:-999em;cursor:pointer;
+}
+.readCardIco{
+	background-position:0 -356px;cursor:pointer;height:20px;width:50px;padding:0;margin:0;border:none;background-color:#ccc;margin:0 0 0 1px;
+}
+* html .readCardIco{margin-top:1px;}
+
+/* 表单样式 */
+.formWidget{
+	zoom:1;
+}
+.formWidget .editinfo {
+    position: relative;
+}
+.formWidget .box {
+    background-color:#fff;border-left: 1px solid #EAF1F9;border-right: 1px solid #EAF1F9;
+}
+.formWidget .box {
+    padding: 10px 15px 6px;
+}
+.formWidget .up,.formWidget .up div, .formWidget .down, .formWidget .down div {
+    background-image: url("../images/formwidget.gif"); background-repeat: no-repeat;
+}
+.formWidget .up {
+    background-position:right 0;padding-right:10px;
+}
+.formWidget .up div{
+	background-position: 0 0;height:6px;line-height:0;
+}
+.formWidget .up, .formWidget .down {
+    font-size: 0;overflow: hidden;
+}
+.formWidget .down {
+    background-position: right bottom;padding-right:10px;
+}
+.formWidget .down div{
+    background-position: 0 bottom;height: 20px;line-height: 6px;
+}
+.formWidget dt {
+    width: 10%; text-align:right;padding:4px 8px 0 0;
+}
+.formWidget .autoWidth {
+    width: auto;
+}
+.formWidget .padtop{
+	padding-top:5px;
+}
+.formWidget .padtop{
+	padding-top:8px\9;
+}
+.formWidget .padtop_s{
+	padding-top:3px;
+}
+.formWidget .padtop_s{
+	padding-top:5px\9;
+}
+.formWidget label{padding-right:5px;}
+.formWidget .searchbox{
+	zoom:1;
+}
+.formWidget .padLeft{
+	padding-left:10px;
+}
+.formWidget .searchbox dt{width:70px;}
+* html .formWidget .searchbox dt{padding-top:5px;}
+.formWidget .searchbox dt.twoString{width: 45px;}
+.formWidget .searchbox dd{width:200px;}
+.formWidget h2{
+	margin:0;padding:6px 0 12px 20px;font-size:14px;
+}
+.formWidget .searchbox .searchmore{
+	width:auto;padding:3px 0 0;
+}
+.formWidget .fileset{
+	background-color:#FCFDF7;border:1px dashed #E1EBAB;display:none;padding:10px;margin-right:10px;
+}
+.formWidget dd ul li{
+	padding-bottom:6px;
+}
+.actuantQuery .searchbox dd{
+	width:120px;
+}
+.formWidget dd.changePayMethod{
+	width:80%
+}
+.formWidget dd.changePayMethod span{
+	float:left;height:24px;width:24%
+}

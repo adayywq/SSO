@@ -1,0 +1,34 @@
+﻿/* 用户中心 */
+.userBasic{
+	border-bottom:1px solid #EEEEEE;padding:0 0 17px;margin:0 0 20px;
+}
+.userBasic dt{
+	width:130px;
+}
+.userBasic .avatar{
+	border:1px solid #DDDDDD;padding:1px;width:110px;
+}
+.userBasic dd{
+	padding-top:15px;
+}
+.userBasic dd span{
+	padding-right:40px;
+}
+.userBasic dd div{
+	padding:8px 0;
+}
+.userBasic dd .userName{
+	font-size:14px;
+}
+.userEdit{
+	padding-left:10px;
+}
+.userEdit dl{
+	padding:0 0 20px;
+}
+.userEdit dl dt{
+	padding-top:2px;padding-right:20px;
+}
+.userEdit dl dd span{
+	padding:0 14px 0 0;
+}

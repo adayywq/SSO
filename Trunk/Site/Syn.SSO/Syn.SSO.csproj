@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FCD55F2-DA86-4606-8055-C77EE27F74DC}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Syn.SSO</RootNamespace>
+    <AssemblyName>Syn.SSO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\ExceptionHandle.cs" />
+    <Compile Include="App_Code\IdentAuthorize.cs" />
+    <Compile Include="Controllers\SSOController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\Utility.js" />
+    <Content Include="Scripts\Validate.js" />
+    <Content Include="Themes\admin\flexigrid.pack.css" />
+    <Content Include="Themes\admin\images\add.png" />
+    <Content Include="Themes\admin\images\bg.gif" />
+    <Content Include="Themes\admin\images\btn-sprite.gif" />
+    <Content Include="Themes\admin\images\ddn.png" />
+    <Content Include="Themes\admin\images\dn.png" />
+    <Content Include="Themes\admin\images\fhbg.gif" />
+    <Content Include="Themes\admin\images\first.gif" />
+    <Content Include="Themes\admin\images\hl.png" />
+    <Content Include="Themes\admin\images\in.png" />
+    <Content Include="Themes\admin\images\last.gif" />
+    <Content Include="Themes\admin\images\line.gif" />
+    <Content Include="Themes\admin\images\load.gif" />
+    <Content Include="Themes\admin\images\load.png" />
+    <Content Include="Themes\admin\images\magnifier.png" />
+    <Content Include="Themes\admin\images\next.gif" />
+    <Content Include="Themes\admin\images\out.png" />
+    <Content Include="Themes\admin\images\prev.gif" />
+    <Content Include="Themes\admin\images\up.png" />
+    <Content Include="Themes\admin\images\uup.png" />
+    <Content Include="Themes\admin\images\wbg.gif" />
+    <Content Include="Themes\default\account.css" />
+    <Content Include="Themes\default\accountDefault.css" />
+    <Content Include="Themes\default\button.css" />
+    <Content Include="Themes\default\global.css" />
+    <Content Include="Themes\default\icon.css" />
+    <Content Include="Themes\default\images\arrow.gif" />
+    <Content Include="Themes\default\images\arrow01.png" />
+    <Content Include="Themes\default\images\blank.gif" />
+    <Content Include="Themes\default\images\body.jpg" />
+    <Content Include="Themes\default\images\button.gif" />
+    <Content Include="Themes\default\images\calendar.gif" />
+    <Content Include="Themes\default\images\card.png" />
+    <Content Include="Themes\default\images\cardinfo.gif" />
+    <Content Include="Themes\default\images\column.gif" />
+    <Content Include="Themes\default\images\dashed.gif" />
+    <Content Include="Themes\default\images\dropmenu.gif" />
+    <Content Include="Themes\default\images\error.gif" />
+    <Content Include="Themes\default\images\faqbox.gif" />
+    <Content Include="Themes\default\images\frame.gif" />
+    <Content Include="Themes\default\images\home-1_03.gif" />
+    <Content Include="Themes\default\images\home.png" />
+    <Content Include="Themes\default\images\ico-banner-normal.png" />
+    <Content Include="Themes\default\images\icon - Copy.gif" />
+    <Content Include="Themes\default\images\icon-item.png" />
+    <Content Include="Themes\default\images\icon.gif" />
+    <Content Include="Themes\default\images\icon\auto.png" />
+    <Content Include="Themes\default\images\icon\delete.png" />
+    <Content Include="Themes\default\images\icon\edit.png" />
+    <Content Include="Themes\default\images\icon\ico-8.png" />
+    <Content Include="Themes\default\images\icon\icon_03.png" />
+    <Content Include="Themes\default\images\icon\icon_05.png" />
+    <Content Include="Themes\default\images\icon\icon_07.png" />
+    <Content Include="Themes\default\images\icon\icon_09.png" />
+    <Content Include="Themes\default\images\icon\link.png" />
+    <Content Include="Themes\default\images\icon\pay.png" />
+    <Content Include="Themes\default\images\icon\search.png" />
+    <Content Include="Themes\default\images\icon\unlink.png" />
+    <Content Include="Themes\default\images\itemaction.png" />
+    <Content Include="Themes\default\images\itembg.gif" />
+    <Content Include="Themes\default\images\itemlistbg.png" />
+    <Content Include="Themes\default\images\login.gif" />
+    <Content Include="Themes\default\images\loginbox.gif" />
+    <Content Include="Themes\default\images\loginhead.png" />
+    <Content Include="Themes\default\images\loginico.png" />
+    <Content Include="Themes\default\images\login_r2_c2_bj.jpg" />
+    <Content Include="Themes\default\images\logo.png" />
+    <Content Include="Themes\default\images\menu.gif" />
+    <Content Include="Themes\default\images\menuhover.gif" />
+    <Content Include="Themes\default\images\monthbg.gif" />
+    <Content Include="Themes\default\images\nav.gif" />
+    <Content Include="Themes\default\images\pageline.gif" />
+    <Content Include="Themes\default\images\pages.gif" />
+    <Content Include="Themes\default\images\pop.png" />
+    <Content Include="Themes\default\images\pop2.png" />
+    <Content Include="Themes\default\images\pop_sernav.png" />
+    <Content Include="Themes\default\images\pwd.gif" />
+    <Content Include="Themes\default\images\qq_login.gif" />
+    <Content Include="Themes\default\images\repeat.gif" />
+    <Content Include="Themes\default\images\save.png" />
+    <Content Include="Themes\default\images\slidwbg.gif" />
+    <Content Include="Themes\default\images\sprite.png" />
+    <Content Include="Themes\default\images\sprite_03.png" />
+    <Content Include="Themes\default\images\ss.png" />
+    <Content Include="Themes\default\images\success.gif" />
+    <Content Include="Themes\default\images\tab.png" />
+    <Content Include="Themes\default\images\table.gif" />
+    <Content Include="Themes\default\images\thead.png" />
+    <Content Include="Themes\default\images\toplink.gif" />
+    <Content Include="Themes\default\images\x.png" />
+    <Content Include="Themes\default\layout.css" />
+    <Content Include="Themes\default\login.css" />
+    <Content Include="Themes\default\notice.css" />
+    <Content Include="Themes\default\question.css" />
+    <Content Include="Themes\default\rss.css" />
+    <Content Include="Themes\default\style.css" />
+    <Content Include="Themes\images\arrow_b.gif" />
+    <Content Include="Themes\images\arrow_s.gif" />
+    <Content Include="Themes\images\body.jpg" />
+    <Content Include="Themes\images\box_bg.png" />
+    <Content Include="Themes\images\buttons.gif" />
+    <Content Include="Themes\images\checkbox_0.gif" />
+    <Content Include="Themes\images\checkbox_1.gif" />
+    <Content Include="Themes\images\checkbox_2.gif" />
+    <Content Include="Themes\images\del.gif" />
+    <Content Include="Themes\images\error.gif" />
+    <Content Include="Themes\images\formwidget.gif" />
+    <Content Include="Themes\images\head.gif" />
+    <Content Include="Themes\images\headbar.gif" />
+    <Content Include="Themes\images\headtab.gif" />
+    <Content Include="Themes\images\icon.gif" />
+    <Content Include="Themes\images\icon\config.gif" />
+    <Content Include="Themes\images\icon\delete.gif" />
+    <Content Include="Themes\images\icon\edit.gif" />
+    <Content Include="Themes\images\icon\movedown.gif" />
+    <Content Include="Themes\images\icon\moveup.gif" />
+    <Content Include="Themes\images\Identity.gif" />
+    <Content Include="Themes\images\indicator.gif" />
+    <Content Include="Themes\images\list_arrow.gif" />
+    <Content Include="Themes\images\login.gif" />
+    <Content Include="Themes\images\login_r2_c2_bj.jpg" />
+    <Content Include="Themes\images\s.gif" />
+    <Content Include="Themes\images\tab.gif" />
+    <Content Include="Themes\images\title.png" />
+    <Content Include="Themes\images\title_left.png" />
+    <Content Include="Themes\images\title_right.png" />
+    <Content Include="Themes\images\tree\arrows.gif" />
+    <Content Include="Themes\images\tree\cbs.gif" />
+    <Content Include="Themes\images\tree\drop-yes.gif" />
+    <Content Include="Themes\images\tree\elbow-end-minus-nl.gif" />
+    <Content Include="Themes\images\tree\elbow-end-minus.gif" />
+    <Content Include="Themes\images\tree\elbow-end-plus-nl.gif" />
+    <Content Include="Themes\images\tree\elbow-end-plus.gif" />
+    <Content Include="Themes\images\tree\elbow-end.gif" />
+    <Content Include="Themes\images\tree\elbow-line.gif" />
+    <Content Include="Themes\images\tree\elbow-minus-nl.gif" />
+    <Content Include="Themes\images\tree\elbow-minus.gif" />
+    <Content Include="Themes\images\tree\elbow-plus-nl.gif" />
+    <Content Include="Themes\images\tree\elbow-plus.gif" />
+    <Content Include="Themes\images\tree\elbow.gif" />
+    <Content Include="Themes\images\tree\folder-open.gif" />
+    <Content Include="Themes\images\tree\folder.gif" />
+    <Content Include="Themes\images\tree\leaf.gif" />
+    <Content Include="Themes\images\tree\loading.gif" />
+    <Content Include="Themes\images\tree_2.gif" />
+    <Content Include="Themes\images\tree_3.gif" />
+    <Content Include="Themes\images\tree_3_hover.gif" />
+    <Content Include="Themes\NewYear\account.css" />
+    <Content Include="Themes\NewYear\button.css" />
+    <Content Include="Themes\NewYear\global.css" />
+    <Content Include="Themes\NewYear\icon.css" />
+    <Content Include="Themes\NewYear\images\arrow.gif" />
+    <Content Include="Themes\NewYear\images\arrow01.png" />
+    <Content Include="Themes\NewYear\images\blank.gif" />
+    <Content Include="Themes\NewYear\images\body.jpg" />
+    <Content Include="Themes\NewYear\images\button.gif" />
+    <Content Include="Themes\NewYear\images\calendar.gif" />
+    <Content Include="Themes\NewYear\images\card.png" />
+    <Content Include="Themes\NewYear\images\cardinfo.gif" />
+    <Content Include="Themes\NewYear\images\column.gif" />
+    <Content Include="Themes\NewYear\images\dashed.gif" />
+    <Content Include="Themes\NewYear\images\dropmenu.gif" />
+    <Content Include="Themes\NewYear\images\error.gif" />
+    <Content Include="Themes\NewYear\images\faqbox.gif" />
+    <Content Include="Themes\NewYear\images\frame.gif" />
+    <Content Include="Themes\NewYear\images\home.png" />
+    <Content Include="Themes\NewYear\images\ico-banner-normal.png" />
+    <Content Include="Themes\NewYear\images\icon - Copy.gif" />
+    <Content Include="Themes\NewYear\images\icon-item.png" />
+    <Content Include="Themes\NewYear\images\icon.gif" />
+    <Content Include="Themes\NewYear\images\icon\auto.png" />
+    <Content Include="Themes\NewYear\images\icon\delete.png" />
+    <Content Include="Themes\NewYear\images\icon\edit.png" />
+    <Content Include="Themes\NewYear\images\icon\ico-8.png" />
+    <Content Include="Themes\NewYear\images\icon\icon_03.png" />
+    <Content Include="Themes\NewYear\images\icon\icon_05.png" />
+    <Content Include="Themes\NewYear\images\icon\icon_07.png" />
+    <Content Include="Themes\NewYear\images\icon\icon_09.png" />
+    <Content Include="Themes\NewYear\images\icon\link.png" />
+    <Content Include="Themes\NewYear\images\icon\pay.png" />
+    <Content Include="Themes\NewYear\images\icon\search.png" />
+    <Content Include="Themes\NewYear\images\icon\unlink.png" />
+    <Content Include="Themes\NewYear\images\itembg.gif" />
+    <Content Include="Themes\NewYear\images\login.gif" />
+    <Content Include="Themes\NewYear\images\loginbox.gif" />
+    <Content Include="Themes\NewYear\images\loginhead.png" />
+    <Content Include="Themes\NewYear\images\loginico.png" />
+    <Content Include="Themes\NewYear\images\login_r2_c2_bj.jpg" />
+    <Content Include="Themes\NewYear\images\logo.png" />
+    <Content Include="Themes\NewYear\images\menu.gif" />
+    <Content Include="Themes\NewYear\images\menuhover.gif" />
+    <Content Include="Themes\NewYear\images\monthbg.gif" />
+    <Content Include="Themes\NewYear\images\nav.gif" />
+    <Content Include="Themes\NewYear\images\pageline.gif" />
+    <Content Include="Themes\NewYear\images\pages.gif" />
+    <Content Include="Themes\NewYear\images\pop.png" />
+    <Content Include="Themes\NewYear\images\pop2.png" />
+    <Content Include="Themes\NewYear\images\pwd.gif" />
+    <Content Include="Themes\NewYear\images\qq_login.gif" />
+    <Content Include="Themes\NewYear\images\repeat.gif" />
+    <Content Include="Themes\NewYear\images\save.png" />
+    <Content Include="Themes\NewYear\images\slidwbg.gif" />
+    <Content Include="Themes\NewYear\images\sprite.png" />
+    <Content Include="Themes\NewYear\images\sprite_03.png" />
+    <Content Include="Themes\NewYear\images\success.gif" />
+    <Content Include="Themes\NewYear\images\tab.png" />
+    <Content Include="Themes\NewYear\images\table.gif" />
+    <Content Include="Themes\NewYear\images\thead.png" />
+    <Content Include="Themes\NewYear\images\topl1.jpg" />
+    <Content Include="Themes\NewYear\images\toplink.gif" />
+    <Content Include="Themes\NewYear\images\x.png" />
+    <Content Include="Themes\NewYear\layout.css" />
+    <Content Include="Themes\NewYear\login.css" />
+    <Content Include="Themes\NewYear\notice.css" />
+    <Content Include="Themes\NewYear\question.css" />
+    <Content Include="Themes\NewYear\rss.css" />
+    <Content Include="Themes\NewYear\style.css" />
+    <Content Include="Themes\style\admin.css" />
+    <Content Include="Themes\style\banner.css" />
+    <Content Include="Themes\style\form.css" />
+    <Content Include="Themes\style\helpInfo.css" />
+    <Content Include="Themes\style\index.css" />
+    <Content Include="Themes\style\list_style1.css" />
+    <Content Include="Themes\style\login.css" />
+    <Content Include="Themes\style\main.css" />
+    <Content Include="Themes\style\public.css" />
+    <Content Include="Themes\style\selfPay.css" />
+    <Content Include="Themes\style\tree.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="LogInfo\" />
+    <Folder Include="Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\SSO\Login.cshtml" />
+    <Content Include="Views\SSO\Logout.cshtml" />
+    <Content Include="Views\Manage\Main.cshtml" />
+    <Content Include="Views\Shared\Tips.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Mdl.Entity\Mdl.Entity.csproj">
+      <Project>{D79DB454-D0AC-4A35-B7CB-722E998C0CB1}</Project>
+      <Name>Mdl.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Mdl.SSO\Mdl.SSO.csproj">
+      <Project>{0E8D7774-0271-4587-ABDC-8606AB004FA0}</Project>
+      <Name>Mdl.SSO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Syn.GDSC2\Syn.GDSC2.csproj">
+      <Project>{1864D2D0-4A0A-4DD8-B4A5-A7EBEA654574}</Project>
+      <Name>Syn.GDSC2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Syn.Special\Syn.Special.csproj">
+      <Project>{55599E4E-8111-4331-9D6B-C92808E1FCC6}</Project>
+      <Name>Syn.Special</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Syn.Utility\Syn.Utility.csproj">
+      <Project>{A9C4BA57-A6A8-4BCF-973C-CC9E0D38E409}</Project>
+      <Name>Syn.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppSetting.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Themes\images\tree\vssver2.scc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16414</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>友情提示</title>
+</head>
+<body style="background: #eee;">
+    <form id="form1" runat="server">
+    <div style="width: 500px; background-color: #FFF; padding: 10px; border-radius: 4px 4px 4px 4px;
+        border: 2px solid #999; margin: 100px auto;">
+        <h2>提示信息：</h2>
+        <p id="msg" style=" font-size:20px; text-indent:2em;">@ViewData["msgInfo"]</p>
+    </div>
+    </form>
+</body>
+</html>

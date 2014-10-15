@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户登录</title>
+    <link type="text/css" rel="stylesheet" href="/Themes/default/login.css"/>
+    <script type="text/javascript" language="javascript" src="/Scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/Scripts/Utility.js"></script>
+</head>
+<body>
+<div id="header">
+<div class="box">
+	<a id="logo" title="单点登录" href="/SSO/Login"></a>
+	<h1 class="systitle" style="*+height:30px">校园一卡通统一登录平台</h1>
+	<div id="toplink"></div>
+</div>
+</div>
+<div class="totalDiv">
+	<!--内容部分-->
+	<div id="login_div01">
+	<div id="login_div02">
+	<div id="login_div04">
+	<h2>校园一卡通统一登录</h2>
+	<div id="login_div05">
+    @using(Html.BeginForm("LoginCheck","SSO",FormMethod.Post))
+    {
+        <div id="ad_div02_div01">
+	    <div id="login_text01">
+	        <div class="login_text01">登录方式：</div>
+	        <div class="login_text02">
+                <select class="select" id="loginType" name="loginType" onchange="KeyType(event)">
+                    <option value="sno">学工号</option>
+                    <option value="accid">账号</option>
+                    <option value="email">电子邮箱</option>
+                    <option value="mobile">手机</option>
+                    <option value="mercid">商户号</option>
+                </select>
+            </div>
+	    </div>
+	    <div id="login_text01">
+	        <div class="login_text01">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</div>
+	        <div class="login_text02"> <input class="login_type" id="loginId" name="loginId" onkeydown="KeyLogin(event)" /></div>
+	    </div>
+	    <div id="login_text01">
+	        <div class="login_text01">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</div>
+	        <div class="login_text02"><input type="password" class="login_type" id="loginPwd" name="loginPwd" onkeydown="KeyPwd(event)" /></div>
+	    </div>
+	    <div id="pd_ico">
+            <!--input type="image" src="themes/default/images/login.gif" onclick="UserLogin();return false;" height="40" /-->
+            <a href="javascript:void(0);"><image src="themes/default/images/login.gif" onclick="UserLogin();return false;" height="40" /></a>
+        </div>
+	    <div id="ad_div02_div03"></div>
+	    </div>
+    }
+	</div>
+    <div class="clearfix"></div>
+    <br/><br/><br/>
+    <div id="msgInfo" runat="server">
+	<!--div class="errorbox" style="margin:0 64px 0 84px;">
+        <img src="/Themes/default/images/error.gif" style="vertical-align:middle;margin:-2px 6px 0 0;" alt=""/>
+        请输入用户名
+    </div-->
+    </div>
+    <!--div>
+        <input type="button" value="学工号(52562311)" onclick="ShortLogin('52562311')" />
+    </div-->	
+	</div>
+	</div>
+	</div>
+</div>
+<div id="footer">
+<div class='box' style="text-align:center;">
+	<p id="pcopyright">版权所有：© 2013 哈尔滨新中新电子股份有限公司</p>
+	<p id="psubcopyright">Harbin synjones electronic co.,ltd Copyright © 2011</p>		
+</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        $('.totalDiv').css('min-height', document.documentElement.clientHeight - 186 + 'px');
+
+        $("#loginId").focus();
+    });
+
+    function UserLogin() {
+        if ($("#loginType").val() == "") {
+            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>登录方式不能为空!</div>");
+            $("#loginType").focus();
+            return;
+        }
+        if ($("#loginId").val() == "") {
+            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>用户名不能为空!</div>");
+            $("#loginId").focus();
+            return;
+        }
+        if ($("#loginPwd").val() == "") {
+            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>密码不能为空!</div>");
+            $("#loginPwd").focus();
+            return;
+        }
+        document.forms[0].submit();
+    }
+
+    function ShortLogin(loginId) {
+        if (loginId == "52562311") {
+            $("#loginId").val(loginId);
+            $("#loginPwd").val("111111");
+        }
+        document.forms[0].submit();
+    }
+
+    function KeyType(e) {
+        document.getElementById("loginId").focus();
+    }
+
+    function KeyLogin(e) {
+        var keys = window.event ? e.keyCode : e.which;
+        if (keys == 13)
+            document.getElementById("loginPwd").focus();
+    }
+    function KeyPwd(e) {
+        var keys = window.event ? e.keyCode : e.which;
+        if (keys == 13)
+            UserLogin();
+    }
+</script>

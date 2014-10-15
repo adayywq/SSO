@@ -1,0 +1,39 @@
+﻿/* Rss 新闻 */
+#rssNews ul li{
+	background:url(images/dashed.gif) 0 center repeat-x;padding:7px 0;
+}
+#rssNews ul li span{
+	background-color:#fff;
+}
+#rssNews ul li span.date{
+	color:#575A58;float:right;
+}
+#rssNews ul li em{
+	color:#E57E17;font-style:normal;
+}
+#rssNews ul li a{
+	color:#575A58;
+}
+#rssNews ul li a:hover{
+	color:#86B505;
+}
+
+
+#listLine ul li{
+	background:url(images/dashed.gif) 0 center repeat-x;padding:7px 0;
+}
+#listLine ul li span{
+	background-color:#fff;
+}
+#listLine ul li span.date{
+	color:#575A58;float:right;
+}
+#listLine ul li em{
+	color:#E57E17;font-style:normal;
+}
+#listLine ul li a{
+	color:#575A58;
+}
+#listLine ul li a:hover{
+	color:#86B505;
+}
