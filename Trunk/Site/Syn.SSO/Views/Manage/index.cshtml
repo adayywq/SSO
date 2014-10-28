@@ -1,0 +1,149 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人信息</title>
+<link href="/themes/default/style.css" rel="stylesheet" type="text/css" />
+<script src="/scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="/Scripts/Utility.js"></script>
+<script type="text/javascript">
+//    $(function () {
+//        function profileLoad() {
+//            $(".mainlrofile").width($(window).width() - $(".side-profile").width() - 80);
+//        }
+
+//        $(window).load(profileLoad).resize(profileLoad);
+
+//        $.ajax({
+//            type: "POST",
+//            cache: false,
+//            async: false,
+//            url: "/Backend/Handler/Back.ashx?cmd=getPurview&" + new Date(),
+//            data: "",
+//            success: function (msg) {
+//                SetCookie("back_purview", msg);
+
+//            }
+//        })
+//    })
+</script>
+
+<script type="text/javascript">
+//    function bind() {
+//        $.ajax({
+//            type: "POST", //用POST方式传输
+//            dataType: "html",
+//            url: "../Control/header.ashx", //目标地址
+//            data: "",
+//            cache: false,
+//            async: false,
+//            complete: function () {
+//            }, //接收数据完毕
+//            success: function (msg) {
+//                var myVariable = msg;
+//                var stringArray = myVariable.split("&");
+//                for (var i = 0; i < stringArray.length; i++) {
+//                    $("#indexname").html(stringArray[0].toString());
+//                }
+//            }
+//        });
+//    }
+    </script>
+</head>
+<body>
+    <div id="ie6" style="background-color: #FFF4A5; border: 1px solid #E4550A; padding: 10px; 
+                margin-bottom: 5px; display: none; ">
+                您现在正在用IE6/IE7浏览本网站，无论是功能/性能/安全性，IE6/IE7都已经远远落后于时代标准，建议您使用最新版本IE，FireFox，Chrome等现代浏览器。
+            </div>
+<div id="mainbox">
+            </div>
+            <div style=" width:1130px">
+            <div style=" padding-right:10px;">
+<div class="head white" style="margin-right:0px;"><div>@ViewData["webcome"]</div></div>
+
+    <div class="formWidget">
+        <div class="up">
+            <div>
+            </div>
+        </div>
+        <div class="box">
+            <table  style="width:100%;">
+                <tr>
+                    <td valign="top" style="border-right: 1px solid #DDD;">
+                        <div style="width: 600px; min-height: 200px;">
+                        <br />
+                            <div style="font-size: 16px; font-family: 'MicroSoft YaHei'; font-weight: bolder;
+                                text-shadow: 0 0 1px #777777;" >
+                               &nbsp; <span id="indexname"></span>&nbsp; &nbsp; 
+                                </div>
+                             <br /><br />
+                                 <div style="font-size: 16px; font-family: 'MicroSoft YaHei'; font-weight: bolder;
+                                text-shadow: 0 0 1px #777777;">
+                                系统当前时间： @ViewData["Date"]
+                                </div>
+                            <div style="margin-top: 10px;">
+                                <ul style="margin-left: -10px;" id="DeskTop" runat="server">
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                    <td valign="top">
+                        <div style="width: 280px; margin-left: 10px; border: 1px solid #F2F2F2; padding: 10px;
+                            color: #777; background-color: #F2F2F2">
+                            <b style="color: Black; font-size: 15px;">功能简介</b>
+                            <div id="FirstLine" runat="server">
+                                <br />
+                                设备监控，实时监控各房间用电情况！
+                                <br />
+                                <br />
+                                电量管理，售/退电，结转及电量相关操作！<br />
+                                <br />
+                                参数设置，多维度管理房间各种电器的用电参数！
+                                <br />
+                                <br />
+                                系统设置，系统基础及公共设置！<br />
+                                <br />
+                               权限管理，支持多种运行方式下的权限设置！<br />
+                                <br />
+                                报表管理，提供丰富友好的报表统计展示！
+                            </div>
+                        </div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                   
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    @RenderPage("~/Views/Control/footer.cshtml")
+
+    <div class="down">
+        <div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" language="javascript">
+    //$(function () {
+    //    $.ajax({
+    //        type: "POST",
+    //        async: false,
+    //        url: "/Basic/GetPower?" + new Date(),
+    //        success: function (data) {
+    //            SetCookie("DKPower", data);
+    //        }
+    //    })
+    //});
+</script>

@@ -96,6 +96,7 @@
     <Compile Include="Extense\ImageHelper.cs" />
     <Compile Include="Extense\MailHelper.cs" />
     <Compile Include="Extense\Pagination.cs" />
+    <Compile Include="Function\fenye.cs" />
     <Compile Include="Function\FileHelper.cs" />
     <Compile Include="Function\Utils.cs" />
     <Compile Include="Extense\XmlHelper.cs" />
