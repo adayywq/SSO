@@ -1,0 +1,1259 @@
+﻿/*create date 01/07/2011*/
+/*revised date 01/13/2011*/
+dl
+{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 5px 0;
+}
+dl dt
+{
+    padding-top: 4px;
+}
+dl dt, dl dd
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.adminBody
+{
+    zoom: 1;width:98%;margin:0 auto;
+}
+.adminBody span
+{
+    display: inline-block;
+}
+.relative
+{
+    position: relative;
+    overflow: visible;
+    height: 25px;
+    z-index: 3;
+}
+.none
+{
+    display: none;
+}
+.adminBody .gray_bg, .adminBody .gray_low_bg, .adminBody .green_bg, .adminBody .green_low_bg
+{
+    background-image: url(/Themes/images/title.gif);
+    background-repeat: repeat-x;
+    line-height: 18px;
+    margin: 5px 0;
+    padding: 2px 12px;
+}
+
+.adminBody .gray_low_bg
+{
+    background-color: #f4f3f9;
+}
+
+.adminBody .green_bg
+{
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+}
+.adminBody .green_low_bg
+{
+    background-color: #e9ff78;
+}
+
+.adminBody .step, .adminBody .step_select
+{
+    background-color: #f4f3f9;
+    color: #5a5a5a;
+    cursor: pointer;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    padding: 2px 5px;
+    position: relative;
+}
+
+.adminBody .step:hover, .adminBody .step_select
+{
+    background-color: #b6b6b6;
+    color: #ffffff;
+}
+
+.adminBody .step .step_arrow, .adminBody .step_select .step_arrow
+{
+    background: url(/Themes/images/step.png) no-repeat 0px 0px;
+    height: 22px;
+    position: absolute;
+    right: -10px;
+    top: 0px;
+    width: 10px;
+}
+
+.adminBody .step:hover .step_arrow, .adminBody .step_select .step_arrow
+{
+    background-position: 0px -22px;
+}
+
+
+.adminBody .left
+{
+    width: 220px;
+    float: left;
+       margin-top: -5px;
+}
+.adminBody div.right
+{
+    
+    float:right;
+    margin-left:5px;   
+}
+.adminBody span.right
+{
+    float: none;
+    display: block;
+}
+
+.adminBody .right .title
+{
+    border-bottom: 3px solid #cbcbcb;
+    font-size: 12px;
+    height: 20px;
+    margin: 5px 0px;
+    padding: 0px 3px;
+    position: relative;
+}
+
+.adminBody .right .title .gray
+{
+    font-weight: bold;
+}
+
+.adminBody .right .title_line
+{
+    border-bottom: 3px solid #8ebe00;
+    display: inline-block;
+    height: 20px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 80px;
+}
+
+.adminBody .right .history
+{
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: -2px;
+    width: 700px;
+}
+
+.adminBody .right .history .listName, .adminBody .right .history .listName .close, .adminBody .right .history .listName .right_bg
+{
+    background: url(/Themes/images/history.png) no-repeat 0px -20px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    line-height: 23px;
+    position: absolute;
+    text-align: center;
+    width: auto;
+}
+
+.adminBody .right .history .listName
+{
+    margin-right: 10px;
+    padding: 0px 5px;
+    position: relative;
+}
+
+.adminBody .right .history .listName .close
+{
+    background-position: -188px -20px;
+    right: -5px;
+    top: 0px;
+    width: 8px;
+}
+
+.adminBody .right .history .listName .right_bg
+{
+    background-position: -296px -20px;
+    right: -9px;
+    top: 0px;
+    width: 4px;
+}
+
+.adminBody .right .history .listName:hover
+{
+    background-position: 0px 0px;
+    color: #5a5a5a;
+}
+
+.adminBody .right .history .listName:hover .close
+{
+    background-position: -288px 0px;
+}
+
+.adminBody .right .history .listName:hover .right_bg
+{
+    background-position: -296px 0px;
+}
+
+.adminBody .right .title_bg
+{
+    background: url(/Themes/images/title_bg.png) repeat-x;
+    height: 22px;
+    width: auto;
+}
+
+
+/* Add 2011/06/01 */
+.head,
+.head div
+{
+    background-image: url("images/head.gif");
+    background-repeat: no-repeat;
+}
+.head
+{
+    
+    background-position: right 0;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+.head div
+{
+    height: 21px;
+    padding: 7px 10px 0;
+    font-weight: bold;
+    margin-left: -10px;
+    position: relative;
+}
+.head .titleText
+{
+    float: left;
+}
+.head .titleText font
+{
+    font-weight: normal;
+    margin-left: 20px;
+}
+.head ul
+{
+    float: left;
+    display: inline;
+    position: absolute;
+    top: 2px;
+    left: -4px;
+}
+.head ul.tabs li
+{
+    float: left;
+    font-weight: normal;
+    padding-left: 4px;
+}
+.head ul.tabs li a, .head ul.tabs li a em
+{
+    background-image: url(/Themes/images/tab.gif);
+    background-repeat: no-repeat;
+    float: left;
+}
+.head ul.tabs li a
+{
+    background-position: right -40px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+.head ul.tabs li a em
+{
+    background-position: 0 -40px;
+    color: #fff;
+    font-style: normal;
+    height: 21px;
+    padding: 5px 0 0 10px;
+    margin-left: -10px;
+    position: relative;
+    cursor: pointer;
+}
+.head ul.tabs li a:hover
+{
+    background-position: right -80px;
+    color: #6B9102;
+    text-decoration: none;
+}
+.head ul.tabs li a:hover em
+{
+    background-position: 0 -80px;
+}
+.head ul.tabs li a.active
+{
+    background-position: right 0;
+    color: #6B9102;
+    text-decoration: none;
+}
+.head ul.tabs li a.active em
+{
+    background-position: 0 0;
+    font-weight: bold;
+    color: #6B9102;
+}
+.head ul.tabs li a.active em
+{
+    height: 26px;
+}
+
+.dataTabel thead tr
+{
+    background-color: #efefef;
+}
+.dataTabel thead tr th
+{
+    border-bottom: 1px solid #b6b6b6;
+}
+.dataTabel td, .dataTabel th
+{
+    border-right: 1px solid #d9d9d9;
+}
+.dataTabel tr td.last, .dataTabel tr th.last
+{
+    border-right: none;
+}
+
+.adminBody .dataTabel tbody tr td
+{
+}
+.dataTabel thead td
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.adminBody .pages
+{
+    background: url(/Themes/images/pages_bg.gif) no-repeat;
+    height: 26px;
+    position: relative;
+    top: 0;
+    text-align: right;
+    padding: 12px 10px 0;
+}
+.adminBody .pages span
+{
+    display: inline;
+}
+
+/* 手工收费 */
+.manualPay .searchbox dd
+{
+    width: auto;
+    padding-right: 10px;
+}
+.actuantQuery .searchbox dd.btnRows
+{
+    padding-left: 8px;
+    padding-right: 0;
+}
+.formWidget .searchbox dd.btnRows
+{
+    width: auto;
+}
+
+.tableScroll
+{
+    overflow: auto;
+    height: auto;
+}
+.tableScroll td
+{
+    white-space: nowrap;
+    border-right: 1px solid #D9DED8;
+    border-bottom: 1px solid #D9DED8;
+}
+.tableScroll table
+{
+    border: 1px solid #D9DED8;
+    border-right: none;
+}
+.tableScroll table thead
+{
+    background: #EFF2EB;
+}
+.tableScroll table thead th
+{
+    border-bottom: 1px solid #D3D9D2;
+    border-right: 1px solid #D3D9D2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-weight: normal;
+}
+.tableScroll table tbody tr:hover
+{
+    background-color: #EAF1CE;
+}
+.actionType
+{
+    padding-top: 6px;
+    display: none;
+}
+.actionType hr
+{
+    border: none;
+    border-top: 1px dashed #ccc;
+    margin: 0 30px;
+}
+
+.editarea
+{
+    padding: 10px 0 0;
+}
+
+.editinfo .headTab, .editinfo .headTab strong
+{
+    background-image: url("images/headtab.gif");
+    background-repeat: no-repeat;
+}
+.editinfo .headTab strong
+{
+    background-position: right 0;
+    display: block;
+    height: 36px;
+    padding: 10px 10px 0 0;
+    float: left;
+}
+
+.editinfo .headTab
+{
+    background-position: 0 0;
+    height: 36px;
+    padding: 0 0 0 28px;
+    position: absolute;
+    left: 0;
+    top: -35px;
+    zoom: 1;
+}
+.editinfo .inner
+{
+    border: 1px solid #d5e4d4;
+    padding: 6px;
+    zoom: 1;
+}
+.editinfo .scroll
+{
+    height: 340px;
+    overflow-y: scroll;
+}
+
+
+
+.budget
+{
+    background-color: #F9B26C;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 3px;
+    vertical-align: middle;
+}
+
+.infobox
+{
+    background-color: #fff;
+    border: 1px solid #D9DED8;
+    border-top: none;
+    margin-top: 10px;
+}
+.infobox .green_bg
+{
+    margin-top: 0;
+}
+.infobox .box
+{
+    padding: 8px 12px 10px;
+}
+.infobox dt
+{
+    width: 86px;
+    text-align: right;
+}
+.infobox dd
+{
+    width: 262px;
+}
+.infobox .checkform
+{
+    padding: 12px;
+}
+.infobox .checkform dd
+{
+    width: auto;
+}
+.infobox .checkform dd.baseinfobox
+{
+    padding-top: 18px;
+    padding-left: 20px;
+}
+.infobox .checkform dd div
+{
+    padding-bottom: 4px;
+}
+
+.paymethod table
+{
+    border: none;
+}
+
+#addDue .formWidget dt, #addDue .formWidget dd
+{
+    width: auto;
+}
+#addDue .formWidget dd
+{
+    padding-right: 20px;
+}
+
+#adjustDue .searchbox dd
+{
+    width: 150px;
+}
+
+#add_standard .editinfo
+{
+    float: left;
+    width: 230px;
+    margin-top: 36px;
+}
+#add_standard .form
+{
+    float: left;
+    width: 440px;
+    padding-top: 30px;
+}
+#add_batch .form dl
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#add_batch .form dt
+{
+    font-size: 14px;
+    padding-top: 4px;
+}
+#add_batch .form dd dt
+{
+    font-size: 12px;
+}
+#add_batch .form dd dd.label
+{
+    padding-top: 4px;
+}
+#batchRule .searchbox dt, #batchRule .searchbox dd
+{
+    width: auto;
+}
+#batchRule .searchbox dd
+{
+    padding-right: 20px;
+}
+#batchReturn .searchbox dd
+{
+    width: auto;
+    padding-right: 10px;
+}
+.buttonArrow
+{
+    border-top: 1px dotted #969696;
+    padding: 14px;
+    text-align: center;
+    margin: 10px;
+}
+.tabClose, .tabClose span
+{
+    background-image: url(/Themes/images/close.gif);
+    background-repeat: no-repeat;
+}
+.tabClose
+{
+    position: absolute;
+    right: -1px;
+    top: -29px;
+    padding-left: 32px;
+}
+.tabClose:hover
+{
+    text-decoration: none;
+}
+.tabClose span
+{
+    background-position: right 0;
+    display: block;
+    height: 24px;
+    padding: 5px 10px 0 0;
+}
+.paymethod
+{
+    padding-top: 8px;
+}
+.paymethod dd.btnRows
+{
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+/*  Search Advanced  */
+.search_advanced .form_set
+{
+    background-image: url('images/advanced_13.gif');
+    background-repeat: no-repeat;
+}
+
+.search_advanced .box, .search_advanced .box .innerBox
+{
+    background-image: url('images/advanced_01.gif');
+    background-repeat: repeat-y;
+}
+.search_advanced .box
+{
+    background-position: 0 0;
+    padding-left: 7px;
+}
+.search_advanced .box .innerBox
+{
+    background-position: right 0;
+    padding: 0 8px 0 0;
+}
+.search_advanced .actionBtn
+{
+    background-color: #EBF9D7;
+    background-image: url('images/advanced_13.gif');
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    height: 41px;
+    padding: 14px 14px 0;
+}
+.search_advanced .bottom, .search_advanced .bottom div
+{
+    background-image: url('images/advanced_05.gif');
+    background-repeat: no-repeat;
+}
+.search_advanced .bottom
+{
+    background-position: right 0;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.search_advanced .bottom div
+{
+    background-position: 0 0;
+    height: 13px;
+    margin-left: -10px;
+    height: 13px;
+    line-height: 13px;
+    font-size: 0;
+    overflow: hidden;
+}
+.search_advanced .head, .search_advanced .head div
+{
+    background-image: url('images/advanced_03.gif');
+    background-repeat: no-repeat;
+}
+.search_advanced .head
+{
+    background-position: right 0;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.search_advanced .head div
+{
+    background-position: 0 0;
+    height: 32px;
+    position: relative;
+    margin-left: -10px;
+}
+.search_advanced .head .close
+{
+    background-image: url('images/advanced_06.gif');
+    background-repeat: no-repeat;
+    background-position: -45px 0;
+    position: absolute;
+    width: 34px;
+    height: 18px;
+    text-indent: -999em;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+}
+.search_advanced .head .close:hover
+{
+    background-position: 0 0;
+}
+.search_advanced .head .btn_green_s
+{
+    position: absolute;
+    right: -12px;
+    top: 32px;
+}
+
+.search_advanced .form_set
+{
+    background-color: #EBF9D7;
+    background-position: 0 bottom;
+    padding: 4px 14px 4px 7px;
+    height: 100%;
+    overflow: hidden;
+}
+.search_advanced .form_set li
+{
+    float: left;
+    padding-right: 33px;
+}
+.search_advanced .form_set .selecte
+{
+    width: 135px;
+    position: relative;
+}
+.search_advanced .form_set li ul
+{
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #CDDAE3;
+    position: absolute;
+    width: 133px;
+    top: 23px;
+}
+.search_advanced .form_set li li
+{
+    float: none;
+    padding-right: 0;
+}
+.search_advanced .form_set li li a
+{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+}
+.search_advanced .form_set li li a:hover
+{
+    background-color: #EBF9D5;
+    text-decoration: none;
+}
+
+
+.search_advanced .form_set li.last
+{
+    padding-right: 10px;
+}
+.search_advanced .form_set li strong
+{
+    display: block;
+    padding: 0 0 3px;
+}
+.search_advanced .scroll
+{
+    height: 100px;
+    overflow-y: auto;
+    padding-left: 6px;
+}
+.search_advanced .actionBtn .tips
+{
+    float: left;
+    padding-top: 4px;
+}
+.search_advanced .actionBtn .button
+{
+    float: right;
+}
+
+/* Store */
+#store .searchbox dt, #store .searchbox dd
+{
+    width: auto;
+}
+#store .searchbox
+{
+    padding-left: 10px;
+    padding-right: 0;
+}
+#store .searchbox dd
+{
+    padding-right: 10px;
+}
+.fullborder
+{
+    border: 1px solid #EAF1F9;
+    padding-top: 4px;
+}
+.multiple
+{
+    position: relative;
+    overflow: visible;
+}
+.multiple input
+{
+    float: left;
+    margin: 0;
+}
+.selectIcon
+{
+    background: url(/Themes/images/selectbtn_bg.gif) no-repeat right 0;
+    border: none;
+    color: #fff;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+* html .selectIcon
+{
+    padding-bottom: 0;
+    padding-top: 2px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: -3px;
+}
+.multiselectMenu
+{
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 20px;
+    width: 156px;
+}
+.multiselectMenu .multipleBox
+{
+    background-color: #fff;
+    border: 1px solid #EAF1F9;
+    border-bottom: none;
+    padding: 3px;
+}
+.multiselectMenu .scroll
+{
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 100;
+    border: 1px solid #ccc;
+    padding-top: 4px;
+}
+.multiselectMenu .menuTop, .multiselectMenu .menuTop div, .multiselectMenu .menuBottom, .multiselectMenu .menuBottom div
+{
+    background-image: url(/Themes/images/multiple.gif);
+    background-repeat: no-repeat;
+}
+.multiselectMenu .tools
+{
+    padding: 4px 2px 6px;
+    margin: 0 0 3px;
+    position: relative;
+}
+.multiselectMenu .tools .close
+{
+    background: url(/Themes/images/close_select.gif) 0 0 no-repeat;
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+.multiselectMenu .menuTop div, .multiselectMenu .menuBottom div
+{
+    height: 6px;
+    line-height: 6px;
+    overflow: hidden;
+    font-size: 0;
+}
+.multiselectMenu .menuTop
+{
+    background-position: right 0;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+.multiselectMenu .menuTop div
+{
+    background-position: 0 0;
+    margin-left: -10px;
+    position: relative;
+}
+.multiselectMenu .menuBottom
+{
+    background-position: right -8px;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+.multiselectMenu .menuBottom div
+{
+    background-position: 0 -8px;
+    margin-left: -10px;
+    position: relative;
+}
+
+/* 手工收费 */
+.payFee dl
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+.payFee dl dt
+{
+    padding-top: 2px;
+    padding-right: 20px;
+}
+.payFee dl dt.toggleHistory
+{
+    padding-top: 3px;
+    padding-left: 15px;
+}
+* html .payFee dl dt.toggleHistory
+{
+    padding-top: 5px;
+}
+/* 操作员信息 */
+.operator .up, .operator .up div, .operator .down div div, .operator .down, .operator .down div, .operator .down div div
+{
+    background-image: url(/Themes/images/operator.gif);
+}
+.operator .sideLeft, .operator .sideRight
+{
+    background-image: url(/Themes/images/operator_side.gif);
+    background-repeat: repeat-y;
+}
+.operator .box
+{
+    position: relative;
+    zoom: 1;
+    overflow: hidden;
+}
+.operator .box .inner
+{
+    padding: 4px 4px 8px;
+}
+.operator .box .inner span
+{
+    padding: 0 12px;
+}
+.operator .box .sideLeft, .operator .box .sideRight
+{
+    position: absolute;
+    width: 10px;
+    overflow: hidden;
+    height: 100000px;
+    top: -1px;
+}
+.operator .box .sideLeft
+{
+    background-position: 0 0;
+    left: 0;
+}
+.operator .box .sideRight
+{
+    background-position: right 0;
+    right: 0;
+}
+.operator .up, .operator .down
+{
+    background-repeat: repeat-x;
+}
+.operator .up
+{
+    background-position: 0 0;
+    height: 22px;
+    position: relative;
+}
+.operator .up div, .operator .up div div
+{
+    height: 22px;
+    line-height: 22px;
+    font-size: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.operator .up div
+{
+    background-position: 0 -43px;
+}
+.operator .up div div
+{
+    background-position: right -85px;
+}
+.operator .down
+{
+    background-position: 0 -27px;
+}
+.operator .down div, .operator .down div div
+{
+    height: 8px;
+    line-height: 8px;
+    font-size: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.operator .down div
+{
+    background-position: 0 -70px;
+    padding-left: 10px;
+}
+.operator .down div div
+{
+    background-position: right -112px;
+}
+/* 步骤设置 */
+.itemselector
+{
+    width: 45%;
+    float: left;
+}
+.itemselector h4, .itemselector h4 div
+{
+    background-image: url(/Themes/images/head.gif);
+    background-repeat: no-repeat;
+    padding-right: 10px;
+    font-size: 100%;
+}
+.itemselector h4
+{
+    background-position: right 0;
+    margin: 0 0 0 10px;
+}
+.itemselector h4 div
+{
+    background-position: 0 0;
+    margin: 0 0 0 -10px;
+    position: relative;
+    height: 16px;
+    padding: 4px 0 0 10px;
+}
+.itemselector h4 .changeAll
+{
+    font-weight: normal;
+    float: right;
+}
+.itemselector .itembox
+{
+    border: 1px solid #97BE29;
+}
+.itemselector .scroll
+{
+    height: 250px;
+    overflow-y: auto;
+}
+.itemselector ul li
+{
+    border: 1px dotted white;
+    cursor: pointer;
+    padding: 5px 10px 0;
+    height: 15px;
+}
+.itemselector ul li:hover, .itemselector ul li.selected
+{
+    background-color: #F2FCDB;
+    border: 1px dotted #B6D290;
+}
+.moveIcoArrow
+{
+    float: left;
+    padding: 5px 10px;
+}
+.btnbg
+{
+    padding: 1px 0 5px;
+}
+.btnbg button
+{
+    background-image: url(/Themes/images/movebtn.gif);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 39px;
+    height: 38px;
+    text-indent: -999em;
+    display: block;
+    zoom: 1;
+}
+.btnbg button.moveup
+{
+    background-position: 0 -47px;
+}
+.btnbg button.moveright
+{
+    background-position: 0 -95px;
+}
+.btnbg button.moveleft
+{
+    background-position: 0 -143px;
+}
+.btnbg button.movedown
+{
+    background-position: 0 -190px;
+}
+.btnbg button.todown
+{
+    background-position: 0 -238px;
+}
+.itemselector ul li a
+{
+    background-image: url(/Themes/images/icon.gif);
+    background-repeat: no-repeat;
+    background-position: 0 -225px;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin: -3px 0 0;
+    display: none;
+}
+.itemselector ul li:hover a
+{
+    display: inline;
+}
+
+/* 表头 */
+.toolsrow
+{
+    background-image: url(../admin/images/bg.gif);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    border: 1px solid #CCCCCC;
+    border-bottom: none;
+    padding: 5px 10px;
+}
+h3
+{
+    background-color: #EFF2ED;
+    margin: 0;
+    font-size: 12px;
+    padding: 3px 5px 3px;
+}
+h3
+{
+    padding: 5px 5px 3px\9;
+}
+h3 span
+{
+    padding: 0 0 0 20px;
+    font-weight: normal;
+}
+.limitedList ul
+{
+    background-color: #FAFBF9;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px 6px 8px;
+}
+.limitedList ul li
+{
+    float: left;
+    width: 16%;
+    height: 24px;
+}
+/* 角色岗位对应 */
+.joblimitedList .row1
+{
+    background-color: #FAFBF9;
+}
+.joblimitedList .row2
+{
+    background-color: #F4F6F3;
+}
+#joblimited .limitedList ul li
+{
+    width: 33%;
+}
+.joblimitedList th
+{
+    white-space: nowrap;
+    padding-top: 7px;
+}
+.joblist span
+{
+    cursor: default;
+    padding: 0 2px 0 0;
+    white-space: nowrap;
+    float: left;
+    height: 20px;
+}
+.joblist span a
+{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 -2px;
+}
+.joblist span.hover
+{
+    background-image: url(/Themes/default/images/del.png);
+    background-repeat: no-repeat;
+    background-position: right 1px;
+}
+.jobform h2
+{
+    padding: 0 0 10px;
+}
+#joblist .limitedList ul li
+{
+    width: 24%;
+}
+#joblist .jobform
+{
+    float: right;
+    width: 530px;
+}
+#joblist .editinfo
+{
+    float: left;
+    width: 176px;
+}
+
+/* 查看通知 */
+.messageContent
+{
+    padding: 0 14px;
+}
+.author
+{
+    background-color: #F7F7F2;
+    padding: 5px;
+    margin: 10px 0;
+}
+.backrow
+{
+    border-top: 1px dashed #ccc;
+    padding: 18px 12px 12px;
+}
+
+/* 首页样式 */
+#homepage
+{
+    border: 1px solid #D9E7B4;
+    padding: 10px;
+}
+#homepage h4
+{
+    border-bottom: 1px solid #D9E7B4;
+    font-size: 14px;
+    margin: 0;
+    padding: 6px 0 6px;
+}
+#homepage h4 span
+{
+    font-weight: normal;
+    font-size: 12px;
+    padding: 0 0 0 20px;
+}
+.bodyDefault
+{
+    background-image: url("images/default.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: -10px auto 0;
+    padding: 407px 0 0;
+    width: 980px;
+}

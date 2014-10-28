@@ -1,0 +1,251 @@
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 11:20:56
+发生异常页：http://localhost:16414/Manage/GetDevList?rp=10&page=1
+异常信息：列“CALLBACKURL”不属于表 。
+错误源：System.Data
+堆栈信息：   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Syn.SSO.Controllers.ManageController.GetDevList(Int32 page, Int32 rp) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 93
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Data.DataColumn GetDataColumn(System.String)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 11:22:29
+发生异常页：http://localhost:16414/Manage/GetDevList?rp=10&page=1
+异常信息：列“CALLBACKURL”不属于表 。
+错误源：System.Data
+堆栈信息：   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Syn.SSO.Controllers.ManageController.GetDevList(Int32 page, Int32 rp) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 93
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Data.DataColumn GetDataColumn(System.String)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 11:24:27
+发生异常页：http://localhost:16414/Manage/GetDevList?rp=10&page=1
+异常信息：列“CALLBACKURL”不属于表 。
+错误源：System.Data
+堆栈信息：   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 Syn.SSO.Controllers.ManageController.GetDevList(Int32 page, Int32 rp) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 93
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Data.DataColumn GetDataColumn(System.String)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：乙丛涛
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:05:56
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 128
+备注：添加开发者
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:06:11
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 166
+   在 Syn.SSO.Controllers.ManageController.AddApp(String dev, String devcode, String siteurl, String callbackurl, String logouturl, String linkman, String mobile, String email, String memo) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 172
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：乙丛涛
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:06:18
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 128
+备注：添加开发者
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:06:40
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 166
+   在 Syn.SSO.Controllers.ManageController.AddApp(String dev, String devcode, String siteurl, String callbackurl, String logouturl, String linkman, String mobile, String email, String memo) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 172
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：乙丛涛
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:03
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 128
+备注：添加开发者
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:03
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 166
+   在 Syn.SSO.Controllers.ManageController.AddApp(String dev, String devcode, String siteurl, String callbackurl, String logouturl, String linkman, String mobile, String email, String memo) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 172
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：乙丛涛
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:04
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 128
+备注：添加开发者
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:04
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 166
+   在 Syn.SSO.Controllers.ManageController.AddApp(String dev, String devcode, String siteurl, String callbackurl, String logouturl, String linkman, String mobile, String email, String memo) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 172
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：乙丛涛
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:04
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   在 System.Convert.ToInt32(Object value)
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 128
+备注：添加开发者
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-17 15:11:04
+发生异常页：http://localhost:16414/Manage/AddApp?dev=开发者&devcode=XXXX&siteurl=网站地址&callbackurl=回调地址&logouturl=退出地址&linkman=联系人&mobile=13681116212&email=7990423@qq.com&memo=备注
+异常信息：输入字符串的格式不正确。
+错误源：mscorlib
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.DevAccredit.InsertDevAccredit(DEVELOPER dev, Int32& devId) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Model\Mdl.SSO\DevAccredit.cs:行号 166
+   在 Syn.SSO.Controllers.ManageController.AddApp(String dev, String devcode, String siteurl, String callbackurl, String logouturl, String linkman, String mobile, String email, String memo) 位置 E:\新中新诚通\开发产品\SSO\Trunk\Site\Syn.SSO\Controllers\ManageController.cs:行号 172
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+引发异常的实例
+--------------------------------------------------------------------------------------------

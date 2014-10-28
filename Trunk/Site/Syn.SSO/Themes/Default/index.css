@@ -1,0 +1,87 @@
+﻿/*create date 01/07/2011*/
+/*revised date 01/10/2011*/
+
+
+body .totalDiv{
+	overflow: hidden; margin:0 auto;
+}
+
+body .totalDiv .indexBody{
+	margin: 0px auto;width: 950px; overflow:hidden; height:100%;
+}
+
+body .totalDiv .indexBody .left, body .totalDiv .indexBody .right{
+	display: inline-block;
+	width: 715px;
+}
+
+body .totalDiv .indexBody .right{
+	margin-left: 10px;
+	width: 220px;
+}
+
+body .totalDiv .indexBody .right span{
+	display: inline-block;
+}
+
+body .totalDiv .indexBody .left .title{
+	border-bottom: 3px solid #cbcbcb;
+	font-size: 14px;
+	font-weight: bold;
+	height: 20px;
+	margin: 10px 0px;
+	padding: 0px 3px;
+	position: relative;
+}
+
+body .totalDiv .indexBody .left .title_line{
+	border-bottom: 3px solid #8ebe00;
+	display: inline-block;
+	height: 20px;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 80px;
+}
+
+body .totalDiv .indexBody .right .title_top, body .totalDiv .indexBody .right .title_bottom{
+	background: url(/Themes/images/title_right.png) no-repeat 0px 0px;
+	color: #ffffff;
+	font-weight: bold;
+	height: 28px;
+	line-height: 28px;
+	margin-top: 5px;
+	padding: 0 5px;
+	width: 210px;
+}
+
+body .totalDiv .indexBody .right .box{
+	background-color: #f4f3f9;
+	line-height: 25px;
+	padding: 5px 10px;
+	width: 200px;
+}
+
+body .totalDiv .indexBody .right .box div{
+	background: url(/Themes/images/dotted_green.png) no-repeat 0px 10px;
+	text-indent: 15px;
+}
+
+body .totalDiv .indexBody .right .title_bottom{
+	background-position: 0px -35px;
+	height: 5px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+}
+
+body .totalDiv .indexBody .right .ad{
+	background: url(/Themes/images/ad_demo.png) no-repeat;
+	display: inline-block;
+	height: 120px;
+	width: 220px;
+}
+
+
+
+
+

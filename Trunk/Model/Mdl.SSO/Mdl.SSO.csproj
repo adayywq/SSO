@@ -48,6 +48,8 @@
     <Compile Include="Freedom\SsoUser.cs" />
     <Compile Include="Ias\SsoUser.cs" />
     <Compile Include="CardUser.cs" />
+    <Compile Include="DevAccredit.cs" />
+    <Compile Include="Developer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenInfo.cs" />
     <Compile Include="SsoUser.cs" />
@@ -61,6 +63,16 @@
     <ProjectReference Include="..\Syn.Special\Syn.Special.csproj">
       <Project>{55599E4E-8111-4331-9D6B-C92808E1FCC6}</Project>
       <Name>Syn.Special</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syn.Utility\Syn.Utility.csproj">
+      <Project>{A9C4BA57-A6A8-4BCF-973C-CC9E0D38E409}</Project>
+      <Name>Syn.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mdl.Entity\Mdl.Entity.csproj">
+      <Project>{D79DB454-D0AC-4A35-B7CB-722E998C0CB1}</Project>
+      <Name>Mdl.Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Syn.Utility\Syn.Utility.csproj">
       <Project>{A9C4BA57-A6A8-4BCF-973C-CC9E0D38E409}</Project>

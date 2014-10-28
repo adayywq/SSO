@@ -1,0 +1,26 @@
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-16 11:18:52
+发生异常页：http://localhost:16414/SSO/LoginCheck
+异常信息：未找到视图“LoginCheck”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+~/Views/SSO/LoginCheck.aspx
+~/Views/SSO/LoginCheck.ascx
+~/Views/Shared/LoginCheck.aspx
+~/Views/Shared/LoginCheck.ascx
+~/Views/SSO/LoginCheck.cshtml
+~/Views/SSO/LoginCheck.vbhtml
+~/Views/Shared/LoginCheck.cshtml
+~/Views/Shared/LoginCheck.vbhtml
+错误源：System.Web.Mvc
+堆栈信息：   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+引发异常的实例
+--------------------------------------------------------------------------------------------

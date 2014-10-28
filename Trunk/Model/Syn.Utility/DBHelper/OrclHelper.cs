@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OracleClient;
 using System.Configuration;
 using System.Collections.Generic;
+using System.Data.Common;
 
 namespace Syn.Utility.DBHelper
 { 
@@ -383,7 +384,34 @@ namespace Syn.Utility.DBHelper
                 trans.Dispose();
             }
         }
-
+        public Boolean ExecuteTransSql(List<string> arrSql, List<OracleParameter[]> lstpara)
+        {
+            OracleConnection conn = new OracleConnection(_ConnectString);
+            OracleCommand cmd = new OracleCommand();
+            conn.Open();
+            OracleTransaction trans = conn.BeginTransaction();
+            try
+            {
+                for (int i = 0; i < arrSql.Count; i++)
+                {
+                    BuildCommand(cmd, conn, trans, CommandType.Text, arrSql[i], lstpara[i]);
+                    cmd.ExecuteNonQuery();
+                }
+                trans.Commit();
+                return true;
+            }
+            catch (System.Data.OracleClient.OracleException E)
+            {
+                trans.Rollback();
+                throw new Exception(E.Message);
+            }
+            finally
+            {
+                conn.Close();
+                cmd.Dispose();
+                trans.Dispose();
+            }
+        }
         /// <summary>
         /// 启动事务，执行一组SQL语句
         /// </summary>

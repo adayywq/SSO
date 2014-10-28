@@ -1,0 +1,25 @@
+﻿/* Button style of sys */
+.button, 
+.button span          {background-image:url(images/button.gif);background-repeat:no-repeat;border:0;display:inline-block;}
+.button               {cursor: pointer;display: inline-block;margin-right:15px;overflow: visible;padding:0;height:26px;}
+.button span          {position: relative;right:-10px;line-height:24px;line-height:25px\9;height:26px;padding:0 10px 0 0;}
+.btn-save             {background-position:0 -160px;}
+.btn-save span        {background-position:right -192px;}
+.btn-save:hover       {background-position:0 -224px;}
+.btn-save:hover span  {background-position:right -256px;}
+.btn-save:active      {background-position:0 -288px;}
+.btn-save:active span {background-position:right -320px;}
+.btn-reset            {background-position:0 -160px;}
+.btn-reset span       {background-position:right -192px;}
+.btn-reset:hover      {background-position:0 -224px;}
+.btn-reset:hover span {background-position:right -256px;}
+.btn-reset:active     {background-position:0 -288px;}
+.btn-reset:active span{background-position:right -320px;}
+.btn-viewmore         {background-position:0 -16px;height:20px;}
+.btn-viewmore span    {background-position:right -40px;color:#fff;height:20px;line-height:20px;font-family:"simsun"}
+.button .icon         {float:left;margin:4px 4px 0 0;}
+.btn-green            {background-position:0 -64px;}
+.btn-green span       {background-position:right -96px;color:#fff;}
+.btn-login            {background-position:-64px -420px;height:34px;width:78px;}
+.btn-register         {background-position:-192px -420px;height:37px;width:92px;}
+
