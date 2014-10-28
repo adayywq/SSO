@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0E8D7774-0271-4587-ABDC-8606AB004FA0}</ProjectGuid>
+    <ProjectGuid>{AC07BBFF-5826-4259-9FCA-10C2D44DFE5E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mdl.SSO</RootNamespace>
-    <AssemblyName>Mdl.SSO</AssemblyName>
+    <RootNamespace>Mdl.API</RootNamespace>
+    <AssemblyName>Mdl.API</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,10 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.OracleClient" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,20 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card\SsoUser.cs" />
-    <Compile Include="Developer.cs" />
-    <Compile Include="Freedom\SsoUser.cs" />
-    <Compile Include="Ias\SsoUser.cs" />
-    <Compile Include="CardUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TokenInfo.cs" />
-    <Compile Include="SsoUser.cs" />
-    <Compile Include="SysUser.cs" />
+    <Compile Include="SSOV1.cs" />
+    <Compile Include="SSOV2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mdl.Entity\Mdl.Entity.csproj">
       <Project>{D79DB454-D0AC-4A35-B7CB-722E998C0CB1}</Project>
       <Name>Mdl.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mdl.SSO\Mdl.SSO.csproj">
+      <Project>{0E8D7774-0271-4587-ABDC-8606AB004FA0}</Project>
+      <Name>Mdl.SSO</Name>
     </ProjectReference>
     <ProjectReference Include="..\Syn.Special\Syn.Special.csproj">
       <Project>{55599E4E-8111-4331-9D6B-C92808E1FCC6}</Project>

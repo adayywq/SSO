@@ -76,39 +76,41 @@ namespace Syn.Special
         /// <returns>是否有执行权限</returns>
         public static bool CheckApiPower(string ac, string apiCode)
         {
-            string pcode = apiCode.Split('_')[0].ToString();
-            string ccode = apiCode.Split('_')[1].ToString();
-            string sqlInsert = " select Daid from DEVAPPR where devid=(select Devid from DEVELOPER where devcode=lower(:devcode) or devcode=Upper(:devcode) and state=1 ) and appid=(select appid from application where Pid = (select appid from  application where appcode=lower(:pcode) or appcode=Upper(:pcode)) and appcode=lower(:scode) or appcode=Upper(:scode))  ";
-            OracleParameter[] sqlParam = new OracleParameter[]{  
-                new OracleParameter("devcode",ac),
-                new OracleParameter("pcode",pcode),
-                new OracleParameter("scode",ccode)
-            };
+            return true;
 
-            OracleDataReader dsOrclUser = null;
-            try
-            {
-                dsOrclUser = Syn.Utility.DBHelper.OrclHelper.SSORead.ExecuteReader(sqlInsert, sqlParam);
-                if (dsOrclUser != null)
-                {
-                    while (dsOrclUser.Read())
-                    {
-                        if (dsOrclUser["Daid"].ToString() != "" || dsOrclUser["Daid"] != DBNull.Value)
-                        {
-                            return true;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Syn.Utility.Log.WriteErrorLog(ex, "杨伟强", "获取第三方授权权限");
-            }
-            finally
-            {
-                dsOrclUser.Dispose();
-            }
-            return false;
+            //string pcode = apiCode.Split('_')[0].ToString();
+            //string ccode = apiCode.Split('_')[1].ToString();
+            //string sqlInsert = " select Daid from DEVAPPR where devid=(select Devid from DEVELOPER where devcode=lower(:devcode) or devcode=Upper(:devcode) and state=1 ) and appid=(select appid from application where Pid = (select appid from  application where appcode=lower(:pcode) or appcode=Upper(:pcode)) and appcode=lower(:scode) or appcode=Upper(:scode))  ";
+            //OracleParameter[] sqlParam = new OracleParameter[]{  
+            //    new OracleParameter("devcode",ac),
+            //    new OracleParameter("pcode",pcode),
+            //    new OracleParameter("scode",ccode)
+            //};
+
+            //OracleDataReader dsOrclUser = null;
+            //try
+            //{
+            //    dsOrclUser = Syn.Utility.DBHelper.OrclHelper.SSORead.ExecuteReader(sqlInsert, sqlParam);
+            //    if (dsOrclUser != null)
+            //    {
+            //        while (dsOrclUser.Read())
+            //        {
+            //            if (dsOrclUser["Daid"].ToString() != "" || dsOrclUser["Daid"] != DBNull.Value)
+            //            {
+            //                return true;
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Syn.Utility.Log.WriteErrorLog(ex, "杨伟强", "获取第三方授权权限");
+            //}
+            //finally
+            //{
+            //    dsOrclUser.Dispose();
+            //}
+            //return false;
         }
 
         /// <summary>

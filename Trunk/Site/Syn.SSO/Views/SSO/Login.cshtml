@@ -13,121 +13,146 @@
     <script type="text/javascript" language="javascript" src="/Scripts/Utility.js"></script>
 </head>
 <body>
-<div id="header">
-<div class="box">
-	<a id="logo" title="单点登录" href="/SSO/Login"></a>
-	<h1 class="systitle" style="*+height:30px">校园一卡通统一登录平台</h1>
-	<div id="toplink"></div>
+<div class="header">
+<div class="header" id="header">
+<div class="toprow">
+<ul>
+		<li class="account">欢迎登录<span>@ViewBag.titname</span></li>
+			<!--li><div><a href="/Account/index/" target="frame_content">返回首页</a></div></li-->
+	</ul>
 </div>
+
+<div class="box">
+	<div class="logo"><img alt="" src="/Images/Logo.png"></div>
+	<div class="sys-title">
+		<h1>@ViewBag.titname</h1>
+		<h2></h2>
+	</div>
+</div>
+    </div>
+</div>
+<div id="checkConfig" style="background-color: #FFF4A5; border: 1px solid #E4550A; padding: 10px; margin-bottom: 5px; display:none;">
+    网站部署时所用临时配置文件尚未删除，该页面在网站上线后有安全隐患，建议立即删除，位置网站根目录，名称Config.aspx。
 </div>
 <div class="totalDiv">
+<!-- Login Box -->
+
 	<!--内容部分-->
 	<div id="login_div01">
 	<div id="login_div02">
+
 	<div id="login_div04">
-	<h2>校园一卡通统一登录</h2>
-	<div id="login_div05">
-    @using(Html.BeginForm("LoginCheck","SSO",FormMethod.Post))
+	<h2>系统登录</h2>
+
+    @using (Html.BeginForm("LoginCheck", "SSO", FormMethod.Post))
     {
-        <div id="ad_div02_div01">
-	    <div id="login_text01">
-	        <div class="login_text01">登录方式：</div>
-	        <div class="login_text02">
-                <select class="select" id="loginType" name="loginType" onchange="KeyType(event)">
-                    <option value="sno">学工号</option>
-                    <option value="accid">账号</option>
-                    <option value="email">电子邮箱</option>
-                    <option value="mobile">手机</option>
-                    <option value="mercid">商户号</option>
-                </select>
-            </div>
-	    </div>
-	    <div id="login_text01">
-	        <div class="login_text01">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</div>
-	        <div class="login_text02"> <input class="login_type" id="loginId" name="loginId" onkeydown="KeyLogin(event)" /></div>
-	    </div>
-	    <div id="login_text01">
-	        <div class="login_text01">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</div>
-	        <div class="login_text02"><input type="password" class="login_type" id="loginPwd" name="loginPwd" onkeydown="KeyPwd(event)" /></div>
-	    </div>
-	    <div id="pd_ico">
-            <!--input type="image" src="themes/default/images/login.gif" onclick="UserLogin();return false;" height="40" /-->
-            <a href="javascript:void(0);"><image src="themes/default/images/login.gif" onclick="UserLogin();return false;" height="40" /></a>
-        </div>
-	    <div id="ad_div02_div03"></div>
-	    </div>
-    }
+	<div id="login_div05">
+	<div id="ad_div02_div01">
+    <div id="checkLoginId" class="sprite request-msg"></div>
+
+    <div id="login_text01">
+	    <div class="login_text01">登录方式：</div>
+	    <div class="login_text02"><input type="text" id="loginType" name="loginType" class="textinput requset" /></div>
 	</div>
-    <div class="clearfix"></div>
-    <br/><br/><br/>
-    <div id="msgInfo" runat="server">
-	<!--div class="errorbox" style="margin:0 64px 0 84px;">
-        <img src="/Themes/default/images/error.gif" style="vertical-align:middle;margin:-2px 6px 0 0;" alt=""/>
-        请输入用户名
-    </div-->
+
+	<div id="login_text01">
+	    <div class="login_text01">学工号：</div>
+	    <div class="login_text02"><input type="text" id="loginId" name="loginId" class="textinput requset" /></div>
+	</div>
+
+	<div id="login_text01">
+	    <div class="login_text01">密&nbsp;&nbsp;&nbsp;&nbsp;码：</div>
+	    <div class="login_text02"><input type="password" id="loginPwd" name="loginPwd" class="textinput requset" /></div>
+	</div>
+	
+	<div id="login_text01">
+	    <div class="login_text01">验证码：</div>
+	    <div class="login_text02"><input id="validateCode" name="validateCode" class="textinput" style="width: 70px;" />   <a href="javascript:void(0);" title="看不清?换一个" onclick="ChangeValidateCode();">                <img id="img_checkcode" src="/Basic/ValidateCode" alt="看不清?换一个" style="height:28px; width:79px; margin-bottom:-8px;"/></a> </div>
+	</div>	
+    <div id="ad_div02_div03">@Html.Raw(ViewBag.msgInfo)</div>
+	<div id="pd_ico"><input type="image" id="img_Submit" src="/Themes/Default/images/login.gif" onclick="UserLogin();return false;"  /></div>
+	
+	</div>
     </div>
-    <!--div>
-        <input type="button" value="学工号(52562311)" onclick="ShortLogin('52562311')" />
-    </div-->	
+    }
+        
 	</div>
 	</div>
 	</div>
+
+<!-- Login Box End -->
 </div>
-<div id="footer">
-<div class='box' style="text-align:center;">
-	<p id="pcopyright">版权所有：© 2013 哈尔滨新中新电子股份有限公司</p>
-	<p id="psubcopyright">Harbin synjones electronic co.,ltd Copyright © 2011</p>		
-</div>
+
+<div class="box" style="text-align:center;">
+	<p id="pcopyright">版权所有：&copy; @ViewBag.Copyright</p>
+	<p id="psubcopyright">Copyright：&copy; @ViewBag.SubCopyright</p>	
 </div>
 </body>
 </html>
 
 <script type="text/javascript">
     $(function () {
-        $('.totalDiv').css('min-height', document.documentElement.clientHeight - 186 + 'px');
 
         $("#loginId").focus();
     });
 
     function UserLogin() {
-        if ($("#loginType").val() == "") {
-            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>登录方式不能为空!</div>");
-            $("#loginType").focus();
-            return;
-        }
+        $(".request-msg").hide();
+
+        $(".textinput").removeClass('input-error');
         if ($("#loginId").val() == "") {
-            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>用户名不能为空!</div>");
-            $("#loginId").focus();
+            ToolTip("loginId", "checkLoginId", "学工号不能为空!");
             return;
         }
         if ($("#loginPwd").val() == "") {
-            $("#msgInfo").html("<div class='errorbox' style='margin:0 64px 0 84px;'><img src='/Themes/default/images/error.gif' style='vertical-align:middle;margin:-2px 6px 0 0;' alt=''/>密码不能为空!</div>");
-            $("#loginPwd").focus();
+            ToolTip("loginPwd", "checkPwd", "密码不能为空!");
+            return;
+        }
+        if ($("#validateCode").val() == "") {
+            ToolTip("validateCode", "checkValidate", "验证码不能为空!");
             return;
         }
         document.forms[0].submit();
     }
-
     function ShortLogin(loginId) {
-        if (loginId == "52562311") {
+        if (loginId == "admin") {
             $("#loginId").val(loginId);
-            $("#loginPwd").val("111111");
+            $("#loginPwd").val("123456");
         }
+        if (loginId == "000001") {
+            $("#loginId").val(loginId);
+            $("#loginPwd").val("000001");
+        }
+        $("#validateCode").val(GetCookie("ValidateCode"))
         document.forms[0].submit();
     }
 
-    function KeyType(e) {
-        document.getElementById("loginId").focus();
+    function ToolTip(inputControl, tipControl, tipText) {
+        alert(tipText);
+        //$("#" + inputControl).addClass('input-error');
+        //$("#" + tipControl).show().text(tipText);
+        $("#" + inputControl).focus();
+    }
+
+    function ChangeValidateCode() {
+        document.getElementById("img_checkcode").src = "/Basic/ValidateCode?a=" + (new Date().getTime());
     }
 
     function KeyLogin(e) {
         var keys = window.event ? e.keyCode : e.which;
         if (keys == 13)
-            document.getElementById("loginPwd").focus();
+            document.getElementById("loginPwd").focus()
     }
     function KeyPwd(e) {
         var keys = window.event ? e.keyCode : e.which;
         if (keys == 13)
-            UserLogin();
+            document.getElementById("validateCode").focus()
     }
+    function KeyValidate(e) {
+        var keys = window.event ? e.keyCode : e.which;
+        if (keys == 13) {
+            document.getElementById("img_Submit").focus()
+            UserLogin();
+        }
+    }   
 </script>

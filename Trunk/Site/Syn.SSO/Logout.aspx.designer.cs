@@ -10,6 +10,6 @@
 namespace Syn.SSO {
     
     
-    public partial class Login {
+    public partial class Logout {
     }
 }

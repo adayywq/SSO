@@ -46,8 +46,9 @@
     <Compile Include="LOG.cs" />
     <Compile Include="MESSAGE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SsoUser.cs" />
     <Compile Include="TOKENINFO.cs" />
-    <Compile Include="USERINFO.cs" />
+    <Compile Include="SysUser.cs" />
     <Compile Include="USERMESSAGE.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
