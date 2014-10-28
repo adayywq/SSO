@@ -1,0 +1,40 @@
+﻿.bbit-usbox{
+    border: solid 1px #D5E4D4;padding:2px 2px 2px 0;display:block;
+}
+.bbit-usbox .bbit-usbox-item{
+    width:auto;margin-left:4px;margin-top:2px;background-color:#F8F8F8;border: solid 1px #ccd5e4;float:left;white-space : nowrap;display:inline;-moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius:2px;height:16px;overflow:hidden;
+}
+.bbit-usbox .bbit-usbox-item a
+{
+    color:#000; 
+    text-decoration:none;
+    padding-left:2px;
+}
+.bbit-usbox .bbit-usbox-item a span
+{
+  
+}
+.bbit-usbox .bbit-usbox-del
+{
+    background:url("../images/plugins/usbox/del.gif") no-repeat 50% 80%;
+    width:10px;
+    height:5px;
+    cursor:pointer;
+    border:none;
+    vertical-align:middle; 
+    margin-left:2px;
+}
+.bbit-usbox-boxc {
+  margin-left:4px;
+  clear:left;
+}
+.bbit-usbox-box{
+	height:100%;
+}
+.bbit-usbox-boxc  input{
+    background-color:#fff;
+    width:100%;
+    height:17px;
+    display:block;
+    border:none;    
+}

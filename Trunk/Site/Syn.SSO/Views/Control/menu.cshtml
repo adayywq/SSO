@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html style="margin-top: -5px;">
+<head>
+    <title>menu</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <script type="text/javascript" src="/scripts/jquery-1.4.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/themes/default/style.css" />
+    <script type="text/javascript" src="/scripts/Utility.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            
+            //            // 左侧菜单效果
+            $('.togglezj').click(function () {
+
+                var $NowMenu = $(this).next('.togglezj-ex');
+                $('.togglezj-ex').hide(400, function () { });
+                if ($NowMenu.is(":visible")) {
+                    $NowMenu.hide(300, function () { });
+                } else {
+                    $NowMenu.show(500, function () { });
+                }
+            });
+            //选中状态
+            $("li").click(function () {
+                $("ul li").removeClass("licolor");
+                $(this).addClass("licolor");
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        //如下代码也是可以的，建议给a标签加标识，否侧页面a标签多，就不容易控制了
+        $("li").click(function () {
+            clearClass();
+            $(this).addClass("bg_color");
+        });
+        function clearClass() {
+            $("li").each(function () {
+                $(this).removeClass("bg_color");
+            });
+        }
+        </script>
+
+     <style type="text/css">
+        .licolor{ background:#EFF2EB;}
+        .bg_color
+        {
+            cursor:pointer;
+            color:Red;
+        }
+        #menu ul {
+    background-color: #fff;
+    background-position: -20px -65px;
+    display: none;
+    overflow: hidden;
+    padding: 2px 0;
+}
+#menu ul, #menu .bottom, #menu h3 {
+    background-image: url("images/title_left.png"");
+    background-repeat: no-repeat;
+}
+
+
+</style>
+</head>
+<body>
+<div class="left">
+
+<div style=" width:230px;">
+<div id="menu" style=" padding-left:5px;">
+	<div class="box" id="menubox">
+    @Html.Raw(ViewBag.menu)
+	</div>
+    </div>
+     </div>
+
+</div>
+</body>
+</html>

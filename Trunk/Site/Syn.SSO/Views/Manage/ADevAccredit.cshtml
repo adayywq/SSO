@@ -1,0 +1,329 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>授权编辑</title>
+    <link rel="stylesheet" type="text/css" href="/themes/default/style.css" />
+    <script type="text/javascript" src="/scripts/jquery-1.4.4.min.js"></script>
+    <link type="text/css" rel="Stylesheet" href="/Scripts/AsyncBox-1.4/skins/ZCMS/asyncbox.css" />
+    <script type="text/javascript" language="javascript" src="/Scripts/AsyncBox-1.4/AsyncBox.v1.4.js"></script>
+    <link type="text/css" rel="Stylesheet" href="/Styles/tooltip/tooltip.css" />
+    <script type="text/javascript" language="javascript" src="/Scripts/tooltip/tooltip.js"></script>
+    <script type="text/javascript" src="/scripts/Utility.js"></script>
+    <script type="text/javascript" src="/scripts/Validate.js"></script>
+    <script type="text/javascript">
+        //purview = GetCookie("back_purview").split(",");
+
+        $(function () {
+
+            //if (GetQueryString("type") == "add") {
+            //    if (!purview.Contains("KFSQ_添加")) {
+            //        $("#a_onok").remove();
+            //    }
+            //}
+            //else if (GetQueryString("type") == "edit") {
+            //    if (!purview.Contains("KFSQ_编辑")) {
+            //        $("#a_onok").remove();
+            //    }
+            //}
+            if (GetQueryString("type") == "edit" && GetQueryString("devId") > 0) {
+                $("#a_onok span").html("保存")
+                $.ajax({
+                    url: '/Manage/GetAppById?devId=' + GetQueryString("devId"),
+                    type: 'post',
+                    success: function (dep) {
+                        $("#i_dev").val(dep.DEVNAME);
+                        $("#i_devcode").val(dep.DEVCODE);
+                        $("#i_siteurl").val(dep.SITEURL);
+                        $("#i_callbackurl").val(dep.CALLBACKURL);
+                        $("#i_logouturl").val(dep.LOGOUTURL);
+                        $("#i_linkman").val(dep.LINKMAN);
+                        $("#i_mobile").val(dep.MOBILE);
+                        $("#i_email").val(dep.EMAIL);
+                        $("#i_memo").val(dep.MEMO);
+                    }
+                });
+            }
+
+            $("#i_dev").showTip({ flagInfo: '必填项，长度不得超过100' });
+            $("#i_devcode").showTip({ flagInfo: '必填项，长度不得超过50' });
+            $("#i_linkman").showTip({ flagInfo: '长度不得超过50' });
+            $("#i_mobile").showTip({ flagInfo: '长度不得超过20' });
+        });
+
+        //返回
+        function Return() {
+            window.location.href = '/Manage/DevAccreditList';
+        }
+
+        //检查输入；合格返回true
+        function CheckInput() {
+            //检查
+            if ($.trim($("#i_dev").val()) == "" || StrLen($.trim($("#i_dev").val())) > 100) {
+                $("#i_dev").showTip({ flagInfo: '必填项，长度不得超过100' });
+                $("#i_dev").focus();
+                return false;
+            }
+            if ($.trim($("#i_devcode").val()) == "" || StrLen($.trim($("#i_devcode").val())) > 50) {
+                $("#i_devcode").showTip({ flagInfo: '必填项，长度不得超过50' });
+                $("#i_devcode").focus();
+                return false;
+            }
+            if (StrLen($.trim($("#i_linkman").val())) > 50) {
+                $("#i_linkman").showTip({ flagInfo: '长度不得超过50' });
+                $("#i_linkman").focus();
+                return false;
+            }
+            if (StrLen($.trim($("#i_mobile").val())) > 20) {
+                $("#i_mobile").showTip({ flagInfo: '长度不得超过20' });
+                $("#i_mobile").focus();
+                return false;
+            }
+
+            //验证应用编号
+            var reg = /^[A-Z0-9]{1,50}$/;
+            if (!reg.exec($.trim($("#i_devcode").val()))) {
+                $("#i_devcode").showTip({ flagInfo: '只能输入大写英文字母和数字' });
+                $("#i_devcode").focus();
+                return false;
+            }
+
+            //验证联系电话
+            if ($.trim($("#i_mobile").val()) != "") {
+                if (!$("#i_mobile").val().IsTel() && !$("#i_mobile").val().IsMobile()) {
+                    $("#i_mobile").showTip({ flagInfo: '不是有效固定电话或手机号码' });
+                    $("#i_mobile").focus();
+                    return false;
+                }
+            }
+
+            //验证email
+            if ($.trim($("#i_email").val()) != "") {
+                if (!$("#i_email").val().IsEmail()) {
+                    $("#i_email").showTip({ flagInfo: '不是有效Email' });
+                    $("#i_email").focus();
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        //添加应用
+        function Add() {
+
+            if (!CheckInput()) return;
+
+            var dev = encodeURIComponent($.trim($("#i_dev").val()));
+            var devCode = encodeURIComponent($.trim($("#i_devcode").val()));
+            var siteurl = encodeURIComponent($.trim($("#i_siteurl").val()));
+            var callbackurl = encodeURIComponent($.trim($("#i_callbackurl").val()));
+            var logouturl = encodeURIComponent($.trim($("#i_logouturl").val()));
+            var linkMan = encodeURIComponent($.trim($("#i_linkman").val()));
+            var mobile = encodeURIComponent($.trim($("#i_mobile").val()));
+            var email = encodeURIComponent($.trim($("#i_email").val()));
+            var memo = encodeURIComponent($.trim($("#i_memo").val()));
+
+            $.ajax({
+                type: "POST",
+                url: "/Manage/AddApp?dev=" + dev + "&devcode=" + devCode + "&siteurl=" + siteurl + "&callbackurl=" + callbackurl + "&logouturl=" + logouturl + "&linkman=" + linkMan + "&mobile=" + mobile + "&email=" + email + "&memo=" + memo,
+                dataType: "html",
+                data: "",
+                beforeSend: function (x) {
+                },
+                success: function (msg) {
+                    if (msg == "0") {
+                        asyncbox.tips('添加成功', 'success');
+                        Return();
+                    }
+                    else if (msg == "1") {
+                        asyncbox.alert("该授权编号已存在！", "提示信息");
+                    }
+                    else if (msg == "3") {
+                        $("#i_dev").showTip({ flagInfo: '该开发者已存在' });
+                        $("#i_dev").focus();
+                    }
+                    else if (msg == "2") {
+                        $("#i_devcode").showTip({ flagInfo: '该开发编号已存在' });
+                        $("#i_devcode").focus();
+                    }
+                    else if (msg == "4") {
+                        $("#i_linkman").showTip({ flagInfo: '该联系人已存在' });
+                        $("#i_linkman").focus();
+                    }
+                    else if (msg == "5") {
+                        $("#i_mobile").showTip({ flagInfo: '该联系电话已存在' });
+                        $("#i_mobile").focus();
+                    }
+                    else if (msg == "6") {
+                        $("#i_email").showTip({ flagInfo: '该Email已存在' });
+                        $("#i_email").focus();
+                    }
+                    else {
+                        asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                    }
+
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                }
+            });
+        }
+
+        //编辑应用
+        function Edit() {
+            if (!CheckInput()) return;
+
+            var devid = GetQueryString("devId");
+            var dev = encodeURIComponent($.trim($("#i_dev").val()));
+            var devCode = encodeURIComponent($.trim($("#i_devcode").val()));
+            var siteurl = encodeURIComponent($.trim($("#i_siteurl").val()));
+            var callbackurl = encodeURIComponent($.trim($("#i_callbackurl").val()));
+            var logouturl = encodeURIComponent($.trim($("#i_logouturl").val()));
+            var linkMan = encodeURIComponent($.trim($("#i_linkman").val()));
+            var mobile = encodeURIComponent($.trim($("#i_mobile").val()));
+            var email = encodeURIComponent($.trim($("#i_email").val()));
+            //var addr = encodeURIComponent($.trim($("#i_addr").val()));
+            var memo = encodeURIComponent($.trim($("#i_memo").val()));
+
+            $.ajax({
+                type: "POST",
+                url: "/Manage/EditApp?devid=" + devid + "&dev=" + dev + "&devcode=" + devCode + "&linkman=" + linkMan + "&mobile=" + mobile + "&email=" + email + "&siteurl=" + siteurl + "&callbackurl=" + callbackurl + "&logouturl=" + logouturl + "&memo=" + memo,
+                dataType: "html",
+                data: "",
+                beforeSend: function (x) {
+                },
+                success: function (msg) {
+                    if (msg == "0") {
+                        asyncbox.tips('编辑成功', 'success');
+                        Return();
+                    }
+                    else if (msg == "3") {
+                        $("#i_dev").showTip({ flagInfo: '该开发者已存在' });
+                        $("#i_dev").focus();
+                    }
+                    else if (msg == "2") {
+                        $("#i_devcode").showTip({ flagInfo: '该开发编号已存在' });
+                        $("#i_devcode").focus();
+                    }
+                    else if (msg == "4") {
+                        $("#i_linkman").showTip({ flagInfo: '该联系人已存在' });
+                        $("#i_linkman").focus();
+                    }
+                    else if (msg == "5") {
+                        $("#i_mobile").showTip({ flagInfo: '该联系电话已存在' });
+                        $("#i_mobile").focus();
+                    }
+                    else if (msg == "6") {
+                        $("#i_email").showTip({ flagInfo: '该Email已存在' });
+                        $("#i_email").focus();
+                    }
+                    else if (msg == "7") {
+                        asyncbox.alert("该数据已不存在！", "提示信息", function () { Return(); });
+                    }
+                    else {
+                        asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                    }
+
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                }
+            });
+        }
+
+        //确定响应事件
+        function OnOk() {
+            if (GetQueryString("type") == "add") {
+                Add();
+            }
+            else if (GetQueryString("type") == "edit") {
+                Edit();
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="head white"><div>@ViewBag.Title</div></div>
+    <div class="formdiv">
+        <div class="box">
+            <div class="">
+                <br />
+                <div class="switchcontent" id="manual-add">
+                    <form id="roluForme" name="roluForme" action="">
+                    <dl>
+                        <dt>开<span style="padding: 0 6px;">发</span>者：</dt>
+                        <dd>
+                            <input id="i_dev" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                        <dt class="msg"><font class="asterisk">*</font></dt>
+                    </dl>
+                    <dl>
+                        <dt>开发编号：</dt>
+                        <dd>
+                            <input id="i_devcode" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                        <dt class="msg"><font class="asterisk">*</font> <span style='color: Red;'>注：只能输入A到Z的大写英文字母和数字</span></dt>
+                    </dl>
+                    <dl>
+                        <dt>网站地址：</dt>
+                        <dd>
+                            <input id="i_siteurl" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>回调地址：</dt>
+                        <dd>
+                            <input id="i_callbackurl" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>退出地址：</dt>
+                        <dd>
+                            <input id="i_logouturl" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>联<span style="padding: 0 6px;">系</span>人：</dt>
+                        <dd>
+                            <input id="i_linkman" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系电话：</dt>
+                        <dd>
+                            <input id="i_mobile" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>电子邮箱：</dt>
+                        <dd>
+                            <input id="i_email" type="text" class="textinput" style="width: 286px;" runat="server" /></dd>
+                    </dl>
+                    <dl>
+                        <dt><span style="padding-right: 23px;">备</span>注：</dt>
+                        <dd>
+                            <textarea id="i_memo" style="width: 286px; height: 90px;" runat="server"></textarea></dd>
+                    </dl>
+                    <br />
+                    <dl>
+                        <dt>&nbsp;</dt>
+                        <dd>
+                            <a id="a_onok" class="button btn-save" type="button" title="" onclick="OnOk()"
+                                runat="server"><span>添加</span></a> 
+                            <a class="button btn-reset" type="button" title="取消" onclick="Return()"><span>取消</span></a>
+                        </dd>
+                    </dl>
+                    </form>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+        <input id="hd_devid" type="hidden" runat="server" />
+        <div class="arc-bottom">
+            <s class="sprite"></s>
+            <p>
+            </p>
+            <i class="sprite"></i>
+        </div>
+    </div>
+</body>
+</html>
+

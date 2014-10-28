@@ -1,0 +1,249 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>开发授权</title>
+    <link rel="stylesheet" type="text/css" href="/themes/default/style.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/default/plugins/ui-layout-pane.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/default/plugins/flexigrid.css" />
+    <link rel="stylesheet" type="text/css" href="/themes/default/plugins/dp.css" />
+    <script type="text/javascript" src="/scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/scripts/Flexigrid-1.1/flexigrid.pack.js"></script>
+    <link type="text/css" rel="Stylesheet" href="/Scripts/AsyncBox-1.4/skins/ZCMS/asyncbox.css" />
+    <script type="text/javascript" language="javascript" src="/Scripts/AsyncBox-1.4/AsyncBox.v1.4.js"></script>
+    <script type="text/javascript" src="/scripts/Utility.js"></script>
+    <link rel="Stylesheet" type="text/css" href="/Scripts/zTree-3.5.12/zTreeStyle.css" />
+    <script type="text/javascript" src="/Scripts/zTree-3.5.12/jquery.ztree.core-3.5.min.js"></script>
+    <script type="text/javascript" src="/Scripts/zTree-3.5.12/jquery.ztree.excheck-3.5.min.js"></script>
+    <script type="text/javascript">
+        //purview = GetCookie("back_purview").split(",");
+
+        $(function () {
+            $("#appList").flexigrid({
+                url: "/Manage/GetDevList?time=" + new Date().getMilliseconds(),
+                dataType: 'json',
+                colModel: GridColModel(),
+                buttons: GridButton(),
+                showToggleBtn: false,
+                showTableToggleBtn: false,
+                height: 330,
+                usepager: true,
+                resizable: false,
+                nomsg: '没有符合条件的记录存在',
+                procmsg: '正在处理数据，请稍候 ...',
+                pagestat: "显示{from}到{to}条数据, 共{total}条数据",
+                pagetext: "当前第", outof: "页, 总页数",
+                rp: 10,
+                rpOptions: [10, 20, 30, 40, 50, 100],
+                singleSelect: true,
+                onRowClick: function (row) {
+                    devID = $(row.cells[0]).children().html();
+                    LoadZtree(devID);
+
+                    //if (purview.Contains("KFSQ_关联")) {
+                        $("#a_save").show();
+                    //}
+                }
+            });
+        });
+
+        //flexgrid的colModel选项
+        function GridColModel() {
+            var model = [];
+            model.push({ display: '编号', name: 'DEVID', width: 30, sortable: false, align: 'center' });
+            model.push({ display: '开发者', name: 'DEVNAME', width: 150, sortable: false, align: 'left', process: function_op });
+            model.push({ display: '开发编号', name: 'DEVCODE', width: 100, sortable: false, align: 'left', process: function_op });
+            //model.push({ display: '开发地址', name: 'CALLBACKURL', width: 190, sortable: false, align: 'left', process: function_op });
+            model.push({ display: '联系人', name: 'LINKMAN', width: 80, sortable: false, align: 'left', process: function_op });
+            model.push({ display: '联系电话', name: 'MOBILE', width: 120, sortable: false, align: 'left' });
+            model.push({ display: '状态', name: 'STATE', width: 50, sortable: false, align: 'center' });
+            model.push({ display: '编辑', name: 'EDITROW', width: 50, sortable: false, align: 'center' });
+            model.push({ display: '删除', name: 'DELROW', width: 50, sortable: false, align: 'center' });
+            //if (purview.Contains("KFSQ_编辑")) {
+            //    model.push({ display: '状态', name: 'STATE', width: 50, sortable: false, align: 'center' });
+            //    model.push({ display: '编辑', name: 'EDITROW', width: 50, sortable: false, align: 'center' });
+            //}
+            //if (purview.Contains("KFSQ_删除")) {
+            //    model.push({ display: '删除', name: 'DELROW', width: 50, sortable: false, align: 'center' });
+            //}
+            return model;
+        }
+
+        //列回调函数
+        function function_op(p1, p2) {
+            p1.childNodes[0].nodeValue = decodeURIComponent(p1.childNodes[0].nodeValue);
+        }
+
+        //flexgrid的Button选项
+        function GridButton() {
+            //if (!purview.Contains("KFSQ_添加")) {
+            //    return "";
+            //}
+            //else {
+            return [{ name: '添加', bclass: 'ico-add', onpress: function () { window.location.href = '/Manage/ADevAccredit?type=add' } }];
+            //}
+        }
+
+        //编辑开发者
+        //devid:开发者id
+        function Edit(devid) {
+            window.location.href = '/Manage/AdevAccredit?type=edit&devId=' + devid;
+        }
+
+        //删除授权应用
+        //devId:开发id
+        function Del(devId) {
+            asyncbox.confirm("删除后无法恢复，是否确认删除该记录？", "提示信息", function (action) {
+                if (action == 'ok') {
+                    $.ajax({
+                        type: "POST",
+                        url: "/Manage/DelDevAccredit?devId=" + devId,
+                        dataType: "html",
+                        data: "",
+                        beforeSend: function (x) {
+                        },
+                        success: function (msg) {
+                            if (msg == "0") {
+                                asyncbox.tips('删除成功', 'success');
+                                $("#appList").flexReload();
+                            }
+                            else if (msg == "1") {
+                                asyncbox.alert("该数据已不存在！", "提示信息");
+                                $("#appList").flexReload();
+                            }
+                            else {
+                                asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                            }
+
+                        },
+                        error: function (XmlHttpRequest, textStatus, errorThrown) {
+                            asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                        }
+                    });
+                }
+            });
+        }
+
+        //改变状态
+        //sl:select控件本身
+        //devId:开发id
+        function ChangeState(sl, devId) {
+
+            $.ajax({
+                type: "POST",
+                url: "/Manage/EditAppState?devId=" + devId + "&state=" + $(sl).val(),
+                dataType: "html",
+                data: "",
+                beforeSend: function (x) {
+                },
+                success: function (msg) {
+                    if (msg == "0") {
+                        asyncbox.tips('更改成功', 'success');
+                    }
+                    else {
+                        asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                        $("#appList").flexReload();
+                    }
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                }
+            });
+        }
+
+        //装载zTree
+        //devId:开发id
+        function LoadZtree(devId) {
+            //alert("devId=" + devId);
+            $.ajax({
+                type: "GET",
+                url: "/Manage/GetAppByDevId?devId=" + devId + "&time=" + new Date().getMilliseconds(),
+                dataType: "json",
+                beforeSend: function (x) {
+                    $("#appTree").hide();
+                    $("#tree_loading").show();
+                },
+                dataFilter: function (data) {
+                    var setting = {
+                        check: {
+                            enable: true
+                        },
+                        data: {
+                            simpleData: {
+                                enable: true
+                            }
+                        }
+                    };
+
+                    zTreeObj = $.fn.zTree.init($("#appTree"), setting, eval('(' + data + ')'));
+
+                    $("#hd_devid").val(devId);
+                },
+                success: function (msg) {
+                    $("#appTree").show();
+                    $("#tree_loading").hide();
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    $("#appTree").show();
+                    $("#tree_loading").hide();
+                    asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                }
+            });
+        }
+
+        //保存开发授权
+        function SaveDevAccredit() {
+            var zTree = $.fn.zTree.getZTreeObj("appTree");
+            var checkNotes = zTree.getCheckedNodes(true);
+            var appIds = "";
+            $.each(checkNotes, function (i, n) {
+                appIds += n.id;
+                if (i != checkNotes.length - 1) {
+                    appIds += '|';
+                }
+            });
+
+            $.ajax({
+                url: '/Manage/SaveDevAccredit?devId=' + $("#hd_devid").val() + "&appIds=" + appIds + "&time=" + new Date().getMilliseconds(),
+                type: 'post',
+                success: function (msg) {
+                    if (msg == "0") {
+                        asyncbox.tips("保存成功", "success");
+                    }
+                    else {
+                        asyncbox.alert("操作失败，请重试或联系管理员！！", "操作失败");
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="head white"><div>开发授权</div></div>
+    <div class="formdiv">
+        <div class="middle-center" style="height: 425px;">
+            <div class="inner-center" style="float: left; width: 79%;">
+                <div class="tablediv" style="width:104%">
+                    <table id="appList">
+                    </table>
+                </div>
+            </div>
+            <div class="inner-west" style="float: left; width: 20%;">
+                <div id="i_saveApp" class="" style="background-color: #FAFAFA; height: 35px; padding: 10px 8px 0;">
+                    <a id="a_save" class="button btn-save" type="button" onclick="SaveDevAccredit()"
+                        title="保存授权" style="display: none;"><span>保存授权</span></a></div>
+                <div class="inner-panel-box" id="weastCotent">
+                    <ul id="appTree" class="ztree" style="height: 363px;">
+                    </ul>
+                    <div id="tree_loading" style="display: none; margin: 20px auto; color: Black; height: 333px;">
+                        <img src="/Images/Icon/indicator.gif" style="width: 16px; height: 16px; position: relative;
+                            top: 5px; margin-left: 20px;" />&nbsp;&nbsp;数据加载中...</div>
+                </div>
+            </div>
+        </div>
+        <input id="hd_devid" type="hidden" />
+    </div>
+</body>
+</html>

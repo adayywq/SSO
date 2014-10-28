@@ -1,0 +1,36 @@
+﻿.tree_1,
+.tree_1_bottom{background: url(images/title_left.png) no-repeat 0px 0px;color: #ffffff;cursor: pointer;font-weight: bold;height: 28px;line-height: 28px;margin-top: 5px;padding: 0 5px;text-indent: 5px;width: 210px;}
+.left a{color:#333;}
+.tree_1_bottom{background-position: 0 -35px;height: 5px;margin-bottom: 5px;margin-top: 0;line-height:5px;overflow:hidden;font-size:0;}
+.left>.box{background: url(images/box_bg.png) 0 0 no-repeat #fff;border-left: 1px solid #ddd;border-right: 0px solid #ddd;overflow: hidden;padding: 2px 0px;width: 218px;}
+.tree_2,
+.select_2,
+.tree_2_low{background: url(images/tree_2.gif) no-repeat 5px 9px;border-top: 1px dotted #b6b6b6;color: #333;cursor: pointer;font-weight: bold;height: 25px;line-height: 25px;margin: 0px 2px;text-indent: 15px;}
+.tree_2_low{background-color: #f8f8f8;}
+.tree_2:hover,
+.tree_2_low:hover,
+.select_2{background-color: #DDD;}
+.tree_3,
+.left .box .select_3{background: url(images/tree_3.gif) no-repeat 15px 7px #ffffff;border-top: 1px dotted #d5d5d5;color: #5a5a5a;cursor: pointer;height: 20px;line-height: 20px;margin: 0px 3px;text-indent: 28px;}
+.tree_3:hover,
+.left .box .select_3{background: url(images/tree_3_hover.gif) no-repeat 15px 7px #ffffff;color: #405e20;font-weight: bold;text-decoration: underline;}
+.toggleload{padding:8px 0;margin:0 10px;}
+.toggleload img{vertical-align:middle;margin:-2px 4px 0 0;}
+.tree_4{background-color:#fff;margin:0 3px;}
+.tree_4 ul{padding:4px 0 ;}
+.tree_4 li a{display:block;height:20px;padding:0 0 0 28px;}
+
+
+.togglezj{background: url("images/title_left.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);color: #ffffff;cursor: pointer;font-weight: bold;height: 28px;line-height: 28px;margin-top: 5px;padding: 0 5px;text-indent: 5px;width: 210px;}
+
+.togglezj-ex li{
+background: url("images/tree_3.gif") no-repeat scroll 15px 7px #ffffff;
+    border-top: 1px dotted #d5d5d5;
+    color: #5a5a5a;
+    cursor: pointer;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 3px;
+    text-indent: 28px;    color: #2a2a2a;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;}

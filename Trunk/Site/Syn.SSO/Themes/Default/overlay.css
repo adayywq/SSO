@@ -1,0 +1,36 @@
+﻿/*工作面板的圆角*/
+.corner_tl{background:url(/Themes/images/overlay/corner_ctb.gif) top left no-repeat; width:13px; height:13px;}
+.corner_tm{background:url(/Themes/images/overlay/corner_ctb.gif) repeat-x; background-position:0px -142px;height:32px;}
+.corner_tr{background:url(/Themes/images/overlay/corner_ctb.gif) top right no-repeat; width:13px;}
+.corner_ml{background:url(/Themes/images/overlay/corner_lr.gif) left repeat-y;}
+.corner_mr{background:url(/Themes/images/overlay/corner_lr.gif) right repeat-y;}
+.corner_bl{background:url(/Themes/images/overlay/corner_ctb.gif) no-repeat; height:13px; background-position:0px -123px;}
+.corner_bm{background:url(/Themes/images/overlay/corner_ctb.gif) bottom repeat-x;}
+.corner_br{background:url(/Themes/images/overlay/corner_ctb.gif) no-repeat;background-position:-123px -123px;}
+.corner_mm{background-color:#FFFFFF;}
+.displayN{display:none;}
+.displayB{display:block;}.displayI{display:inline;}.block{display:block;}
+/*tool.cs*/
+:focus{-moz-outline-style:none;}
+.apple_overlay{display:none;background-image:url(/Themes/images/overlay/overlay/transparent.gif);/*width:750px;*/font-size:12px;}
+.apple_overlay div.close{position:absolute; right:10px; top:0px; line-height:35px; cursor:pointer;height:35px;width:35px; z-index:22;background:url(/Themes/images/overlay/dclose.png); _background:url(/Themes/images/overlay/dclose.gif);}
+.apple_overlay .div_box div.close{top:0;}
+.apple_overlay .div_box h1{position:absolute;left:10px;top:6px;margin:0;padding:0;font-size:12px;color:#fff;}
+*html .apple_overlay .div_box h1{top:8px;}
+.contentWrap{_overflow:hidden;}
+.contentWrap .div_box{ margin:0px;}
+.tabBodyR_loading{position:absolute; width:200px; right:15px; top:3px; z-index:17; color:#f39700; text-align:right;}
+/*根据长度切割默认下拉框*/
+#txtfields{
+    clip:rect(0px 80px 20px 0px);/*切除下拉框(select)内容区域，只保留下拉三角箭头*/
+}
+#tbInput{
+	width:185px;margin:0;height:16px;background-color:#FFF;border:1px solid #969696;padding:0;cursor:pointer;
+}
+.tdp td{padding:1px ;}
+body {
+	margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;
+}
+.asdasd {
+	text-align: center;
+}

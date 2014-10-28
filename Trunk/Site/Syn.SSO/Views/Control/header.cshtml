@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>header</title>
+    <link rel="stylesheet" type="text/css" href="/Themes/default/style.css" />     
+    <script type="text/javascript" src="/scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery-powerFloat-min.js"></script>
+    <script type="text/javascript">
+
+
+        function expandIt(divID) {
+            if ($('#checktree').val() != "") {
+                $('#' + $('#checktree').val()).slideUp("slow");
+            }
+            if ($('#' + divID).css('display') == "none") {
+                $('#' + divID).slideDown("slow");
+                $('#checktree').val(divID);
+            }
+            else {
+                $('#' + divID).slideUp("slow");
+                $('#checktree').val("");
+            }
+        }
+
+        function reinitIframe() {
+            var iframe = document.getElementById("frame_content");
+
+            try {
+                var bHeight = iframe.contentWindow.document.body.scrollHeight;
+
+                var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+
+                var height = Math.max(bHeight, dHeight);
+                iframe.height = height;
+                //iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;
+                // iframe.width = iframe.contentWindow.document.documentElement.scrollWidth;
+
+            } catch (ex) { }
+
+        }
+
+    </script>
+    <style type="text/css">
+        a:link
+        {
+            text-decoration: none;
+        }
+        .ico-ucenter-user{background-position:-39px -224px}
+        .ico-ucenter      {background-position: -39px -248px;}
+    </style>
+</head>
+<body>
+    <div id="header" class="header">
+        <div class="toprow">
+	<ul>
+		<li class="account">你好，<strong class="green">@ViewData["Headname"]</strong>　欢迎登录 @ViewData["titname"]<span><a href="/Manage/MseList/" target="frame_content"> @Html.Raw(ViewBag.headmessage)</a></span><span><a href="/Basic/Logout/" class="green_mid">[安全退出]</a></span></li>
+			<li><div><a href="/Manage/index/" target="frame_content">返回首页</a></div></li>
+	</ul>
+</div>
+
+<div class="box">
+	<div class="logo"><a href="/Manage/index/" target="frame_content" title="@ViewData["titname"]"><img src="/Images/Logo.png" alt="@ViewData["titname"]"></a></div>
+	<div class="sys-title">
+		<h1>@ViewData["titname"]</h1>
+		<h2>@ViewData["SubTitle"]</h2>
+	</div>
+</div>
+
+
+    </div>
+</body>
+</html>

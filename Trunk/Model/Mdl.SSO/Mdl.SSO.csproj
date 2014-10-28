@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DevAccredit.cs" />
+    <Compile Include="Developer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mdl.Entity\Mdl.Entity.csproj">
+      <Project>{D79DB454-D0AC-4A35-B7CB-722E998C0CB1}</Project>
+      <Name>Mdl.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syn.Utility\Syn.Utility.csproj">
+      <Project>{A9C4BA57-A6A8-4BCF-973C-CC9E0D38E409}</Project>
+      <Name>Syn.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
