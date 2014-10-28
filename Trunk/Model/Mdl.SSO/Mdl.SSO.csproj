@@ -49,7 +49,6 @@
     <Compile Include="Ias\SsoUser.cs" />
     <Compile Include="CardUser.cs" />
     <Compile Include="DevAccredit.cs" />
-    <Compile Include="Developer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TokenInfo.cs" />
     <Compile Include="SsoUser.cs" />
