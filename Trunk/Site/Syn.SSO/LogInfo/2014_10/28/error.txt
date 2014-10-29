@@ -1,0 +1,21 @@
+Coder：GP Team
+用户IP：127.0.0.1
+发生时间：2014-10-28 16:26:14
+发生异常页：http://localhost:16414/
+异常信息：未将对象引用设置到对象的实例。
+错误源：Syn.SSO
+堆栈信息：   在 Syn.SSO.Controllers.SSOController.GetBackUrl(String devCode, String urlType) 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 128
+   在 Syn.SSO.Controllers.SSOController.Login(String devCode, String returnUrl) 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 21
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.String GetBackUrl(System.String, System.String)
+引发异常的实例
+--------------------------------------------------------------------------------------------

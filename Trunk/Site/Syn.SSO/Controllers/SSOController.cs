@@ -16,6 +16,7 @@ namespace Syn.SSO.Controllers
         //登录
         public ActionResult Login(string devCode,string returnUrl)
         {
+            devCode = String.IsNullOrEmpty(devCode) ? "sso" : devCode;
             if (String.IsNullOrEmpty(returnUrl))
             {
                 returnUrl = GetBackUrl(devCode,"CallbackUrl");
@@ -48,6 +49,11 @@ namespace Syn.SSO.Controllers
                 Response.Redirect(connUrl, true);
             }
             return View();
+        }
+
+        public void ValidateCode()
+        {
+            Syn.Special.General.CreateCheckCodeImage(Syn.Special.General.GenerateCheckCode());
         }
 
         public ActionResult LoginCheck()
@@ -101,6 +107,8 @@ namespace Syn.SSO.Controllers
         //退出登录
         public ActionResult Logout(string devCode, string returnUrl, string sessionKey)
         {
+            devCode = String.IsNullOrEmpty(devCode) ? "sso" : devCode;
+
             string cookieName = "sso_user";
             System.Web.HttpCookie cookieUser = null;
             if (string.IsNullOrEmpty(sessionKey))

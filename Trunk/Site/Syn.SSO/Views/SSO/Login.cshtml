@@ -67,7 +67,7 @@
 	
 	<div id="login_text01">
 	    <div class="login_text01">验证码：</div>
-	    <div class="login_text02"><input id="validateCode" name="validateCode" class="textinput" style="width: 70px;" />   <a href="javascript:void(0);" title="看不清?换一个" onclick="ChangeValidateCode();">                <img id="img_checkcode" src="/Basic/ValidateCode" alt="看不清?换一个" style="height:28px; width:79px; margin-bottom:-8px;"/></a> </div>
+	    <div class="login_text02"><input id="validateCode" name="validateCode" class="textinput" style="width: 70px;" />   <a href="javascript:void(0);" title="看不清?换一个" onclick="ChangeValidateCode();">                <img id="img_checkcode" src="/SSO/ValidateCode" alt="看不清?换一个" style="height:28px; width:79px; margin-bottom:-8px;"/></a> </div>
 	</div>	
     <div id="ad_div02_div03">@Html.Raw(ViewBag.msgInfo)</div>
 	<div id="pd_ico"><input type="image" id="img_Submit" src="/Themes/Default/images/login.gif" onclick="UserLogin();return false;"  /></div>
@@ -135,7 +135,7 @@
     }
 
     function ChangeValidateCode() {
-        document.getElementById("img_checkcode").src = "/Basic/ValidateCode?a=" + (new Date().getTime());
+        document.getElementById("img_checkcode").src = "/SSO/ValidateCode?a=" + (new Date().getTime());
     }
 
     function KeyLogin(e) {
