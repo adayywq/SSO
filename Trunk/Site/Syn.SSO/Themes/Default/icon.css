@@ -1,0 +1,81 @@
+﻿/* Icon style of sys */
+.icon             {background-image: url(images/icon.png);background-repeat:no-repeat;width:16px;height:16px;vertical-align:middle;margin-right:4px;}
+.ico-arrow-1      {background-position: -40px -8px;margin-top:-2px;}
+.ico-arrow-2      {background-position: -56px -8px;}
+.ico-clock        {background-position: -40px -40px;width:20px;height:20px;margin:-2px 5px 0 0;}
+.ico-s-1, .ico-s-2,
+.ico-s-3, .ico-s-4{color:#fff;width:22px;float:left;padding:0 0 0 4px;line-height:16px;_line-height:17px;margin:0;}
+.ico-s-1          {background-position: -40px -64px;}
+.ico-s-2          {background-position: -40px -88px;}
+.ico-s-3          {background-position: -40px -112px;}
+.ico-s-4          {background-position: -40px -136px;}
+.ico-print        {background-position: -40px -160px;}
+.ico-info         {background-position: -64px -160px;}
+.ico-del-s        {background-position: -88px -8px;cursor:pointer;}
+.ico-edit         {background-position: -88px -160px;}
+.ico-import       {background-position: -112px -160px;}
+.ico-more         {background-position: -80px -38px;width:46px;}
+.ico-new          {background-position: -136px -37px;width:24px;margin-left:4px;}
+.ico-new-2        {background-position: -80px -64px;}
+.ico-home         {background-position: -40px -192px;}
+.ico-create       {background-position: -64px -192px;}
+.ico-add          {background-position: -88px -192px;}
+.ico-add3         {background: transparent url(images/Item.Add.gif) no-repeat 0 1px;width:16px;height:16px;vertical-align:middle; margin-right:4px;}
+.ico-del          {background-position: -112px -192px;}
+.ico-cacel        {background-position: -136px -192px;}
+.ico-edit         {background-position: -160px -192px;}
+.ico-list         {background-position: -184px -192px;}
+.ico-lock         {background-position: -208px -192px;}
+.ico-unlock       {background-position: -208px -216px;}
+.ico-save         {background-position: -232px -192px;}
+.ico-exp          {background-position: -256px -192px;}
+.ico-impt         {background-position: -280px -192px;}
+.ico-form         {background-position: -328px -192px;}
+.ico-return       {background-position: -352px -192px;}
+.ico-refresh      {background-position: -376px -192px;}
+.ico-set          {background-position: -400px -192px;}
+.ico-view         {background-position: -424px -192px;}
+.ico-warning      {background-position: -448px -192px;}
+.ico-calendar     {background-position: -472px -192px;}
+.ico-legend       {background-position: -496px -192px;}
+.ico-help         {background-position: -520px -192px;}
+.ico-addrole      {background-position: -544px -192px;}
+.ico-addlimit     {background-position: -568px -192px;}
+.ico-stop         {background-position: -184px -160px;}
+.ico-enabled      {background-position: -208px -160px;}
+.ico-undo         {background-position: -136px -160px;}
+.ico-check        {background-position: -160px -160px;}
+.ico-load         {background-image: url(images/loading.gif);background-position: 0 0;}
+.ico-recycle      {background-position: -232px -160px;}
+.ico-moveup       {background-position: -256px -160px;}
+.ico-movedown     {background-position: -280px -160px;}
+.ico-selected     {background-position: -80px -88px;}
+.ico-ucenter      {background-position: -112px -248px;}
+
+.ico-news         {background-position: -64px -224px;}
+.ico-setting      {background-position: -40px -224px;}
+.ico-backhome     {background-position: -88px -224px;}
+.active .ico-news    {background-position: -64px -248px;}
+.active .ico-setting {background-position: -40px -248px;}
+.active .ico-backhome{background-position: -88px -248px;}
+.ico-error-b,
+.ico-tips-b,
+.ico-success-b{width:42px;height:42px;}
+.ico-error-b      {background-position: -40px -344px;}
+.ico-tips-b       {background-position: -88px -344px;}
+.ico-success-b    {background-position: -136px -344px;}
+.ico-copyright-b  {background-position: -40px -464px;width:40px;height:40px;}
+.ico-change-b     {background-position: -88px -464px;width:40px;height:40px;}
+
+.ico-32           {background-position: -464px -360px;width:32px;height:32px;}
+.ico-m0           {background-position: -384px -320px;}
+.ico-m1           {background-position: -424px -320px;}
+.ico-m2           {background-position: -464px -320px;}
+.ico-m3           {background-position: -504px -320px;}
+.ico-m4           {background-position: -424px -360px;}
+.ico-m5           {background-position: -384px -360px;}
+.ico-m6           {background-position: -544px -320px;}
+
+.ico-home-light   {background-position: -88px -224px;}
+.ico-ucenter-light{background-position: -112px -224px;}
+.ico-logout-light {background-position: -136px -224px;}
