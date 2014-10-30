@@ -19,8 +19,16 @@ namespace Syn.SSO.Controllers
             devCode = String.IsNullOrEmpty(devCode) ? "sso" : devCode;
             if (String.IsNullOrEmpty(returnUrl))
             {
-                returnUrl = GetBackUrl(devCode,"CallbackUrl");
+                returnUrl = Request.Url.Scheme + "://" + Request.Url.Authority + "/Manage/Main";
+
+                DataTable dtData = Developer.GetByDevCode(devCode.ToUpper());
+                if ((dtData != null) && !String.IsNullOrEmpty(dtData.Rows[0]["CallbackUrl"].ToString()) && (dtData.Rows[0]["CallbackUrl"].ToString() != "#"))
+                {
+                    returnUrl = dtData.Rows[0]["SiteUrl"].ToString().Trim('/') + "/" + dtData.Rows[0]["CallbackUrl"].ToString().Trim('/');
+                }
             }
+            Session["ReturnUrl"] = returnUrl;
+
 
             HttpCookie cookieUser = (Request.Cookies["sso_user"] == null) ? new HttpCookie("sso_user") : Request.Cookies["sso_user"];
             if (!String.IsNullOrEmpty(cookieUser.Values["sk"]))
@@ -29,6 +37,10 @@ namespace Syn.SSO.Controllers
                 string loginState = (new Mdl.SSO.SsoUser()).LoginVerify(devCode, sk);
                 if (loginState.Contains("100|succeed"))
                 {
+                    Mdl.Entity.SsoUser mdlSsoUser = new Mdl.SSO.SsoUser().GetUser(devCode, sk);
+                    FormsAuthentication.SetAuthCookie(mdlSsoUser.UserId + "|" + mdlSsoUser.Name, false);
+
+                    returnUrl = (returnUrl.IndexOf("?") >= 0) ? (returnUrl + "&sk=" + sk) : (returnUrl + "?sk=" + sk);
                     return new RedirectResult(returnUrl);
                 }
             }
@@ -44,10 +56,13 @@ namespace Syn.SSO.Controllers
                         string sysCode = ConfigurationManager.AppSettings["SysCode"] == null ? "" : ConfigurationManager.AppSettings["SysCode"].ToString().Trim();
                         connUrl = connUrl + "/ias/prelogin?sysid=" + sysCode + "&continueurl=" + currUrl + "/SSO/IasTrans";
                         break;
-                }
-                Session["ReturnUrl"] = returnUrl;
+                }                
                 Response.Redirect(connUrl, true);
             }
+
+            ViewData["Title"] = ConfigurationManager.AppSettings["Title"].ToString();
+            ViewData["Copyright"] = ConfigurationManager.AppSettings["Copyright"].ToString();
+            ViewData["SubCopyright"] = ConfigurationManager.AppSettings["SubCopyright"].ToString();
             return View();
         }
 
@@ -67,9 +82,15 @@ namespace Syn.SSO.Controllers
             {
                 if (string.Compare(validateCode.ToLower(), Request.Cookies["ValidateCode"].Value.ToLower(), true) == 0)
                 {
+                    if (loginId.Trim().ToLower() == "admin")
+                        loginType = "sso";
+
                     string r = (new Mdl.SSO.SsoUser()).UserLogin("SSO",loginType,loginId, loginPwd);
                     if (r.Contains("100|succeed"))
                     {
+                        string sk = r.Split('|')[2].Trim();
+                        Mdl.Entity.SsoUser mdlSsoUser = new Mdl.SSO.SsoUser().GetUser("sso", sk);
+
                         HttpCookie cookieCode = Response.Cookies["ValidateCode"];
                         if (cookieCode != null)
                         {
@@ -77,31 +98,34 @@ namespace Syn.SSO.Controllers
                             cookieCode.Expires = DateTime.Now.AddDays(-1);
                             Response.Cookies.Set(cookieCode);
                         }
-
-                        string sk = r.Split('|')[2].Trim();
+                                                
                         HttpCookie cookieUser = new HttpCookie("sso_user");
                         cookieUser.Values.Add("sk", sk);
+                        //cookieUser.Values.Add("name", Url.Encode(mdlSsoUser.Name));
                         Response.Cookies.Add(cookieUser);
 
-                        FormsAuthentication.SetAuthCookie(loginId, false);
+                        FormsAuthentication.SetAuthCookie(mdlSsoUser.UserId + "|" + mdlSsoUser.Name, false);
                         return (new RedirectResult("/Manage/Main"));
                     }
                     else
                     {                        
-                        ViewData["msgInfo"] = "<span style='color: Red; margin-left:28px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>用户名或密码错误</span>";
+                        ViewData["msgInfo"] = "<span style='color: Red; margin-left:58px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>用户名或密码错误</span>";
                     }
                 }
                 else
                 {
-                    ViewData["msgInfo"] = "<span style='color: Red; margin-left:28px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>验证码错误</span>";
+                    ViewData["msgInfo"] = "<span style='color: Red; margin-left:58px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>验证码错误</span>";
                 }
             }
             else
             {
-                ViewData["msgInfo"] = "<span style='color: Red; margin-left:28px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>验证码错误</span>";
+                ViewData["msgInfo"] = "<span style='color: Red; margin-left:58px; font-size: 15px; display: inline-block; width: 160px; border: 1px solid #FEC7C7; padding: 3px; background-color: #FFECEC; text-align:center;'>验证码错误</span>";
             }
 
-            return View("/SSO/Login.cshtml");
+            ViewData["Title"] = ConfigurationManager.AppSettings["Title"].ToString();
+            ViewData["Copyright"] = ConfigurationManager.AppSettings["Copyright"].ToString();
+            ViewData["SubCopyright"] = ConfigurationManager.AppSettings["SubCopyright"].ToString();
+            return View("/Views/SSO/Login.cshtml");
         }
 
         //退出登录
@@ -124,26 +148,17 @@ namespace Syn.SSO.Controllers
 
             if (String.IsNullOrEmpty(returnUrl))
             {
-                returnUrl = GetBackUrl(devCode, "LogoutUrl");
+                returnUrl = Request.Url.Scheme + "://" + Request.Url.Authority + "/SSO/Login";
+
+                DataTable dtData = Developer.GetByDevCode(devCode.ToUpper());
+                if ((dtData != null) && !String.IsNullOrEmpty(dtData.Rows[0]["LogoutUrl"].ToString()) && (dtData.Rows[0]["LogoutUrl"].ToString() != "#"))
+                {
+                    returnUrl = dtData.Rows[0]["SiteUrl"].ToString().Trim('/') + "/" + dtData.Rows[0]["LogoutUrl"].ToString().Trim('/');
+                }
             }
 
-            return new RedirectResult(returnUrl);
-        }
-
-        //获取ReturnUrl
-        private string GetBackUrl(string devCode,string urlType)
-        {
-            DataTable dtData = Developer.GetByDevCode(devCode.ToUpper());
-            if (dtData == null)
-            {
-                urlType = Request.Url.Scheme + "://" + Request.Url.Authority + "Manage/Main";
-            }
-            else
-            {
-                urlType = dtData.Rows[0]["SiteUrl"].ToString().Trim('/') + "/" + dtData.Rows[0][urlType].ToString().Trim('/');
-            }
-
-            return urlType;
+            ViewBag.connUrl = returnUrl;
+            return View();
         }
     }
 }

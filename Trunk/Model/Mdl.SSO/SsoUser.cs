@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 using System.Web;
+using System.Web.Security;
 
 namespace Mdl.SSO
 {
@@ -27,8 +28,8 @@ namespace Mdl.SSO
              * 205|failed|SIOS初始化失败
              * 206|failed|令牌生成失败
              * 207|failed|服务导入失败
-             * 210|failed|admin用户不存在
-             * 211|failed|admin密码错误
+             * 210|failed|SSO用户不存在
+             * 211|failed|SSO密码错误
              * 220|failed|SNO用户不存在
              * 221|failed|SNO密码错误
              * 222|failed|SNO信息导入失败
@@ -149,9 +150,11 @@ namespace Mdl.SSO
                 cookieUser.Expires = DateTime.Now.AddDays(-1);
                 HttpContext.Current.Response.SetCookie(cookieUser);
             }
+
+            FormsAuthentication.SignOut();
             
             return "100|succeed";
-        }        
+        }
 
         private string GetConnType(string useScene)
         {

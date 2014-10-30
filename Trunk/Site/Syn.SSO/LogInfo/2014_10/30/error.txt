@@ -1,0 +1,224 @@
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:41:46
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteNonQuery(String sql, CommandType cmdType, OracleParameter[] cmdParams) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 167
+   在 Mdl.SSO.TokenInfo.DelOldSk(String devCode) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 136
+备注：删除过期SessionKey失败
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:41:46
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.DelOldSk(String devCode) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 140
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 162
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:46:46
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteNonQuery(String sql, CommandType cmdType, OracleParameter[] cmdParams) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 167
+   在 Mdl.SSO.TokenInfo.DelOldSk(String devCode) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 136
+备注：删除过期SessionKey失败
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:47:29
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.DelOldSk(String devCode) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 140
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 162
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:49:27
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01036: 非法的变量名/编号
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteDataSet(String sql, CommandType cmdType, OracleParameter[] cmdParms) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 340
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 176
+备注：检查SessionKey是否存在失败
+引发异常的方法System.Data.DataSet ExecuteDataSet(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:49:27
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01036: 非法的变量名/编号
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 200
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Data.DataSet ExecuteDataSet(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:50:25
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01036: 非法的变量名/编号
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteDataSet(String sql, CommandType cmdType, OracleParameter[] cmdParms) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 340
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 176
+备注：检查SessionKey是否存在失败
+引发异常的方法System.Data.DataSet ExecuteDataSet(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:50:45
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01036: 非法的变量名/编号
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 200
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Data.DataSet ExecuteDataSet(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:51:48
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：索引超出了数组界限。
+错误源：Mdl.SSO
+堆栈信息：   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 194
+备注：检查SessionKey是否存在失败
+引发异常的方法Boolean IsExistsSk(System.String, System.String, System.String ByRef, System.String ByRef)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:51:48
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：索引超出了数组界限。
+错误源：Mdl.SSO
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 200
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Boolean IsExistsSk(System.String, System.String, System.String ByRef, System.String ByRef)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:53:08
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：索引超出了数组界限。
+错误源：Mdl.SSO
+堆栈信息：   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 194
+备注：检查SessionKey是否存在失败
+引发异常的方法Boolean IsExistsSk(System.String, System.String, System.String ByRef, System.String ByRef)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/30 13:53:20
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：索引超出了数组界限。
+错误源：Mdl.SSO
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.IsExistsSk(String devCode, String sessionKey, String& loginType, String& loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 200
+   在 Mdl.SSO.Card.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Card\SsoUser.cs:行号 366
+   在 Mdl.SSO.SsoUser.GetUser(String devCode, String sessionKey) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 119
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 88
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Boolean IsExistsSk(System.String, System.String, System.String ByRef, System.String ByRef)
+引发异常的实例
+--------------------------------------------------------------------------------------------

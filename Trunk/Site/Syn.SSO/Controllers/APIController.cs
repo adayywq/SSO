@@ -31,5 +31,10 @@ namespace Syn.SSO.Controllers
             }
             return cr;
         }
+
+        public ActionResult IasTrans()
+        {
+            return null;
+        }
     }
 }

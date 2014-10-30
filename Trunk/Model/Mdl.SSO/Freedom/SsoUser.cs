@@ -36,13 +36,12 @@ namespace Mdl.SSO.Freedom
                 result = "203|failed|请正确填写密码";
                 return result;
             }
-            if (loginId.ToLower().Trim() == "admin")
-            {
-                result = AdminLogin(devCode, loginId, password);
-                return result;
-            }
+
             switch (loginType.Trim().ToLower())
             {
+                case "sso":
+                    result = SsoLogin(devCode, loginId, password);
+                    break;
                 case "sno":
                     result = SnoLogin(devCode, loginId, password);
                     break;
@@ -64,21 +63,21 @@ namespace Mdl.SSO.Freedom
 
         #region 用户登录
         
-        //admin登录
-        public string AdminLogin(string devCode, string loginId, string password)
+        //SSO登录
+        public string SsoLogin(string devCode, string loginId, string password)
         {
             string pwd = Syn.Special.EncryptHelper.UserMd5Encrypt(password);
-            DataTable dtData = (new SysUser()).LoginBySno(loginId);
+            DataTable dtData = (new SysUser()).LoginBySso(loginId);
             if (dtData == null)
             {
-                return "210|failed|admin用户不存在";
+                return "210|failed|SSO用户不存在";
             }
             if (pwd != dtData.Rows[0]["PWD"].ToString())
             {
-                return "211|failed|admin密码错误";
+                return "211|failed|SSO密码错误";
             }
 
-            string sessionKey = (new TokenInfo()).AddToken(devCode, "sno", loginId);
+            string sessionKey = (new TokenInfo()).AddToken(devCode, "sso", loginId);
             if (String.IsNullOrEmpty(sessionKey))
             {
                 return "206|failed|令牌生成失败";
@@ -241,6 +240,9 @@ namespace Mdl.SSO.Freedom
 
             switch (loginType.Trim().ToLower())
             {
+                case "sso":
+                    mdlSsoUser = GetUserBySso(devCode, loginId);
+                    break;
                 case "sno":
                     mdlSsoUser = GetUserBySno(devCode, loginId);
                     break;
@@ -263,20 +265,20 @@ namespace Mdl.SSO.Freedom
         #region 获取用户信息
 
         /// <summary>
-        /// 获取Admin用户信息
+        /// 获取SSO用户信息
         /// </summary>
-        /// <param name="sno"></param>
+        /// <param name="loginId"></param>
         /// <returns></returns>
-        public Mdl.Entity.SsoUser GetUserByAdmin(string sno)
+        public Mdl.Entity.SsoUser GetUserBySso(string devCode, string loginId)
         {
             Mdl.Entity.SsoUser mdlSsoUser = new Mdl.Entity.SsoUser();
-            DataTable dtData = (new SysUser()).GetBySno(sno);
+            DataTable dtData = (new SysUser()).GetBySso(loginId);
             if (dtData == null)
             {
                 return null;
             }
             mdlSsoUser.UserId = dtData.Rows[0]["USERID"] == null ? "" : dtData.Rows[0]["USERID"].ToString();
-            mdlSsoUser.Sno = dtData.Rows[0]["LoginID"].ToString();
+            mdlSsoUser.Sno = loginId;
             mdlSsoUser.AccountId = "";
             mdlSsoUser.Name = dtData.Rows[0]["NAME"] == null ? "" : dtData.Rows[0]["NAME"].ToString();
             mdlSsoUser.Email = dtData.Rows[0]["EMAIL"] == null ? "" : dtData.Rows[0]["EMAIL"].ToString();
@@ -295,11 +297,6 @@ namespace Mdl.SSO.Freedom
         /// <returns></returns>
         public Mdl.Entity.SsoUser GetUserBySno(string devCode, string sno)
         {
-            if (sno.Trim().ToLower() == "admin")
-            {
-                return GetUserByAdmin(sno);
-            }
-
             Mdl.Entity.SsoUser mdlSsoUser = new Mdl.Entity.SsoUser();
             DataTable dtData = (new SysUser()).GetBySno(sno);
             if (dtData == null)

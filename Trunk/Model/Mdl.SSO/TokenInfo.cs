@@ -23,7 +23,7 @@ namespace Mdl.SSO
         /// <returns></returns>
         public string AddToken(Mdl.Entity.TOKENINFO mdlToken)
         {
-            string sqlData = "Insert into SSOSK (TokenID,Token,LoginId,LoginType,UseSys,DataSource,ClientIp,ClientMac,LastUpdate) values (TokenID.NEXTVAL,:Token,:LoginId,:LoginType,:UseSys,:DataSource,:ClientIp,:ClientMac,:LastUpdate)";
+            string sqlData = "Insert into TokenInfo (TokenID,Token,LoginId,LoginType,UseSys,DataSource,ClientIp,ClientMac,LastUpdate) values (TokenID.NEXTVAL,:Token,:LoginId,:LoginType,:UseSys,:DataSource,:ClientIp,:ClientMac,:LastUpdate)";
             OracleParameter[] paramData = new OracleParameter[] 
             {
                 new OracleParameter("Token",OracleType.VarChar),
@@ -33,7 +33,7 @@ namespace Mdl.SSO
                 new OracleParameter("DataSource",OracleType.VarChar),
                 new OracleParameter("ClientIp",OracleType.VarChar),
                 new OracleParameter("ClientMac",OracleType.VarChar),
-                new OracleParameter("LastUpdate",OracleType.VarChar)
+                new OracleParameter("LastUpdate",OracleType.DateTime)
             };
             paramData[0].Value = mdlToken.TOKEN;
             paramData[1].Value = mdlToken.LOGINID;
@@ -126,7 +126,7 @@ namespace Mdl.SSO
             OracleParameter[] paramData = new OracleParameter[] 
             {
                 //new OracleParameter("UseSys",OracleType.VarChar),
-                new OracleParameter("LastUpdate",OracleType.VarChar)
+                new OracleParameter("LastUpdate",OracleType.DateTime)
             };
             //paramData[0].Value=devCode;
             paramData[0].Value=Convert.ToDateTime(timeOut);
@@ -168,7 +168,7 @@ namespace Mdl.SSO
                 OracleParameter[] paramData = new OracleParameter[] 
                 {
                     //new OracleParameter("UseSys",OracleType.VarChar),
-                    new OracleParameter("SessionKey",OracleType.VarChar)
+                    new OracleParameter("Token",OracleType.VarChar)
                 };
                 //paramData[0].Value=devCode;
                 paramData[0].Value = sessionKey;
@@ -187,11 +187,11 @@ namespace Mdl.SSO
                 string sqlUpdate = "Update TokenInfo set LastUpdate=:LastUpdate where TokenID=:TokenID";
                 OracleParameter[] paramUpdate = new OracleParameter[] 
                 {
-                    new OracleParameter("LastUpdate",OracleType.VarChar),
+                    new OracleParameter("LastUpdate",OracleType.DateTime),
                     new OracleParameter("TokenID",OracleType.VarChar)
                 };
-                paramData[0].Value=DateTime.Now;
-                paramData[1].Value = dsData.Tables[0].Rows[0]["TokenID"].ToString();
+                paramUpdate[0].Value = DateTime.Now;
+                paramUpdate[1].Value = dsData.Tables[0].Rows[0]["TokenID"].ToString();
 
                 OrclHelper.SSOWrite.ExecuteNonQuery(sqlUpdate, CommandType.Text, paramUpdate);
             }

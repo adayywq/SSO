@@ -484,15 +484,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AppSetting.config" />
+    <Content Include="AppSetting.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="API\SSO.ashx" />
     <None Include="Themes\images\tree\vssver2.scc" />
-    <Content Include="Verify.ashx" />
     <Content Include="Views\Control\footer.cshtml" />
     <Content Include="Views\Control\header.cshtml" />
     <Content Include="Views\Control\menu.cshtml" />
+    <Content Include="Verify.ashx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Themes\Default\images\plugins\autocomplete\vssver2.scc" />
