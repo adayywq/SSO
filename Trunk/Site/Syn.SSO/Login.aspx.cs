@@ -14,7 +14,7 @@ namespace Syn.SSO
         {
             string devCode = RequestHelper.GetString("devCode");
             string returnUrl = RequestHelper.GetString("returnUrl");
-            new SSO.Controllers.SSOController().Login(devCode, returnUrl);
+            //new SSO.Controllers.SSOController().Login(devCode, returnUrl);
         }
     }
 }

@@ -70,6 +70,28 @@ namespace Mdl.SSO
         /// <summary>
         /// 根据SNO登录
         /// </summary>
+        /// <param name="loginId"></param>
+        /// <returns></returns>
+        public DataTable LoginBySso(string loginId)
+        {
+            string sqlData = "Select PWD from UserInfo where LoginType='sso' and LoginID=:LoginID";
+            OracleParameter[] paramData = new OracleParameter[]
+            {
+                new OracleParameter("LoginID",OracleType.VarChar)
+            };
+            paramData[0].Value = loginId;
+
+            DataSet dsData = OrclHelper.SSORead.ExecuteDataSet(sqlData, CommandType.Text, paramData);
+            if ((dsData == null) || (dsData.Tables.Count == 0) || (dsData.Tables[0].Rows.Count == 0))
+            {
+                return null;
+            }
+            return dsData.Tables[0];
+        }
+
+        /// <summary>
+        /// 根据SNO登录
+        /// </summary>
         /// <param name="sno"></param>
         /// <returns></returns>
         public DataTable LoginBySno(string sno)
@@ -219,6 +241,28 @@ namespace Mdl.SSO
                 return false;
             }
             return true;
+        }
+
+        /// <summary>
+        /// 根据SSO查找用户信息
+        /// </summary>
+        /// <param name="loginId"></param>
+        /// <returns></returns>
+        public DataTable GetBySso(string loginId)
+        {
+            string sqlData = "Select UserID,UniteID,LoginType,LoginID,Name,Email,Mobile,InitIdent,DataSource,CreateDate,State from UserInfo where LoginType='sso' and LoginID=:LoginID";
+            OracleParameter[] paramData = new OracleParameter[]
+            {
+                new OracleParameter("LoginID",OracleType.VarChar)
+            };
+            paramData[0].Value = loginId;
+
+            DataSet dsData = OrclHelper.SSORead.ExecuteDataSet(sqlData, CommandType.Text, paramData);
+            if ((dsData == null) || (dsData.Tables.Count == 0) || (dsData.Tables[0].Rows.Count == 0))
+            {
+                return null;
+            }
+            return dsData.Tables[0];
         }
 
         /// <summary>

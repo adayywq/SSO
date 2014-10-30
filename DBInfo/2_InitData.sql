@@ -9,12 +9,12 @@ Insert into Application (AppID,AppName,AppCode,PID,OrderNum) values (AppID.Nextv
 Insert into Application (AppID,AppName,AppCode,PID,OrderNum) values (AppID.Nextval,'用户信息','getuser',(AppID.Currval-3),3);
 Insert into Application (AppID,AppName,AppCode,PID,OrderNum) values (AppID.Nextval,'安全退出','logout',(AppID.Currval-4),4);
 
-Insert into Developer (DevId,AccCode,DevName,DevCode,LinkMan,Mobile,Email,SiteUrl,CallbackUrl,LogoutUrl,Memo,Creator,CreatDate,Modifier,ModifyDate,State) values (DevId.Nextval,'','新中新一卡通系统','XZXYKTXT','','','','http://192.168.10.69:8080/','#','#','',-1,sysdate,-1,sysdate,1);
+Insert into Developer (DevId,AccCode,DevName,DevCode,LinkMan,Mobile,Email,SiteUrl,CallbackUrl,LogoutUrl,Memo,Creator,CreatDate,Modifier,ModifyDate,State) values (DevId.Nextval,'','校园一卡通管理平台','GLPT','杨伟强','','yangweiqiang@synjones.net','http://192.168.10.71:8001/','/Main.aspx','#','',-1,sysdate,-1,sysdate,1);
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-3));
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-2));
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-1));
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval));
-Insert into Developer (DevId,AccCode,DevName,DevCode,LinkMan,Mobile,Email,SiteUrl,CallbackUrl,LogoutUrl,Memo,Creator,CreatDate,Modifier,ModifyDate,State) values (DevId.Nextval,'','新中新收费系统','XZXSFXT','','','','http://192.168.10.68:86/','#','#','',-1,sysdate,-1,sysdate,1);
+Insert into Developer (DevId,AccCode,DevName,DevCode,LinkMan,Mobile,Email,SiteUrl,CallbackUrl,LogoutUrl,Memo,Creator,CreatDate,Modifier,ModifyDate,State) values (DevId.Nextval,'','校园一卡通服务平台','FWPT','杨伟强','','','yangweiqiang@synjones.net','/Account/Index.aspx','/Main.aspx','',-1,sysdate,-1,sysdate,1);
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-3));
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-2));
 Insert into DevAppR (DaID,DevID,AppID) values (DaID.Nextval,DevID.Currval,(AppID.Currval-1));

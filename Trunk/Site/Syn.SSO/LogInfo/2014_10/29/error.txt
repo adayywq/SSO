@@ -1,0 +1,158 @@
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/29 10:18:29
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：未找到视图“/SSO/Login.cshtml”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+/SSO/Login.cshtml
+错误源：System.Web.Mvc
+堆栈信息：   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/29 10:58:01
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：未找到视图“/SSO/Login.cshtml”或其母版视图，或没有视图引擎支持搜索的位置。搜索了以下位置: 
+/SSO/Login.cshtml
+错误源：System.Web.Mvc
+堆栈信息：   在 System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   在 System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1c.<>c__DisplayClass1e.<InvokeActionResultWithFilters>b__1b()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法System.Web.Mvc.ViewEngineResult FindView(System.Web.Mvc.ControllerContext)
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:49:10
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-00942: 表或视图不存在
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteNonQuery(String sql, CommandType cmdType, OracleParameter[] cmdParams) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 167
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 49
+备注：Token生成失败
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:49:10
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-00942: 表或视图不存在
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 56
+   在 Mdl.SSO.TokenInfo.AddToken(String devCode, String loginType, String loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 82
+   在 Mdl.SSO.Freedom.SsoUser.SsoLogin(String devCode, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 80
+   在 Mdl.SSO.Freedom.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 43
+   在 Mdl.SSO.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 51
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 77
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:52:19
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteNonQuery(String sql, CommandType cmdType, OracleParameter[] cmdParams) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 167
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 49
+备注：Token生成失败
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:52:19
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 56
+   在 Mdl.SSO.TokenInfo.AddToken(String devCode, String loginType, String loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 82
+   在 Mdl.SSO.Freedom.SsoUser.SsoLogin(String devCode, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 80
+   在 Mdl.SSO.Freedom.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 43
+   在 Mdl.SSO.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 51
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 77
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：杨伟强
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:54:56
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.DBHelper.OrclHelper.ExecuteNonQuery(String sql, CommandType cmdType, OracleParameter[] cmdParams) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\DBHelper\OrclHelper.cs:行号 167
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 49
+备注：Token生成失败
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
+Coder：GP Team
+用户IP：192.168.10.71
+发生时间：2014/10/29 14:54:56
+发生异常页：http://192.168.10.71:7000/SSO/LoginCheck
+异常信息：ORA-01861: 文字与格式字符串不匹配
+
+错误源：Syn.Utility
+堆栈信息：   在 Syn.Utility.Log.WriteErrorLog(Exception objErr, String coder, String remark) 位置 D:\GitHub\SSO\Trunk\Model\Syn.Utility\Log.cs:行号 142
+   在 Mdl.SSO.TokenInfo.AddToken(TOKENINFO mdlToken) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 56
+   在 Mdl.SSO.TokenInfo.AddToken(String devCode, String loginType, String loginId) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\TokenInfo.cs:行号 82
+   在 Mdl.SSO.Freedom.SsoUser.SsoLogin(String devCode, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 80
+   在 Mdl.SSO.Freedom.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\Freedom\SsoUser.cs:行号 43
+   在 Mdl.SSO.SsoUser.UserLogin(String devCode, String loginType, String loginId, String password) 位置 D:\GitHub\SSO\Trunk\Model\Mdl.SSO\SsoUser.cs:行号 51
+   在 Syn.SSO.Controllers.SSOController.LoginCheck() 位置 D:\GitHub\SSO\Trunk\Site\Syn.SSO\Controllers\SSOController.cs:行号 77
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   在 System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)
+备注：系统未捕捉异常
+引发异常的方法Int32 ExecuteNonQuery(System.String, System.Data.CommandType, System.Data.OracleClient.OracleParameter[])
+引发异常的实例
+--------------------------------------------------------------------------------------------
