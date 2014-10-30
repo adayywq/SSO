@@ -98,7 +98,7 @@ namespace Syn.SSO.Controllers
                             cookieCode.Expires = DateTime.Now.AddDays(-1);
                             Response.Cookies.Set(cookieCode);
                         }
-                                                
+                        
                         HttpCookie cookieUser = new HttpCookie("sso_user");
                         cookieUser.Values.Add("sk", sk);
                         //cookieUser.Values.Add("name", Url.Encode(mdlSsoUser.Name));
