@@ -83,6 +83,7 @@ namespace Syn.SSO.Controllers
             dtAppList.Columns.Add("LOGOUTURL", Type.GetType("System.String"));
             dtAppList.Columns.Add("EDITROW", Type.GetType("System.String"));
             dtAppList.Columns.Add("DELROW", Type.GetType("System.String"));
+            dtAppList.Columns.Add("EMAIL", Type.GetType("System.String"));
 
             //权限
             //sw.HttpCookie cookie = sw.HttpContext.Current.Request.Cookies["back_purview"];
@@ -97,6 +98,7 @@ namespace Syn.SSO.Controllers
                 newRow["DEVNAME"] = RequestHelper.UrlEncode(dt.Rows[i]["DEVNAME"].ToString());
                 newRow["DEVCODE"] = RequestHelper.UrlEncode(dt.Rows[i]["DEVCODE"].ToString());
                 newRow["LINKMAN"] = RequestHelper.UrlEncode(dt.Rows[i]["LINKMAN"].ToString());
+                newRow["EMAIL"] = RequestHelper.UrlEncode(dt.Rows[i]["EMAIL"].ToString());
                 newRow["MOBILE"] = dt.Rows[i]["MOBILE"];
                 newRow["CALLBACKURL"] = RequestHelper.UrlEncode(dt.Rows[i]["CALLBACKURL"].ToString());
                 newRow["LOGOUTURL"] = RequestHelper.UrlEncode(dt.Rows[i]["LOGOUTURL"].ToString());
