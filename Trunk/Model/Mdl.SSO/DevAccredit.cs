@@ -35,7 +35,7 @@ namespace Mdl.SSO
             if (curPage > totalPage) curPage = totalPage;
 
             //调用分页方法
-            dt = fenyepage.pagefenyeset("DEVELOPER", "DEVID", "DEVID", curPage, pageSize, " DEVID,ACCCODE,DEVNAME,DEVCODE,LINKMAN,MOBILE,STATE,CALLBACKURL,LOGOUTURL ", where, " desc ", "");
+            dt = fenyepage.pagefenyeset("DEVELOPER", "DEVID", "DEVID", curPage, pageSize, " DEVID,ACCCODE,DEVNAME,DEVCODE,LINKMAN,MOBILE,STATE,CALLBACKURL,LOGOUTURL,EMAIL ", where, " desc ", "");
 
             return dt;
         }
@@ -263,22 +263,15 @@ namespace Mdl.SSO
         /// <returns>成功返回0, 数据不存在返回1，出错返回-1</returns>
         public int DeleteDevAccredit(int devId)
         {
-            string sql = "begin "
-                + "select count(DEVID) into :DEVIDNUM from DEVELOPER where DEVID=:DEVID;"
-                + "if :DEVIDNUM!=0 then "
-                + "delete DEVELOPER where DEVID=:DEVID;"
-                + "end if;"
-                + " end;";
-
+            string sql = "delete DEVELOPER where DEVID=:DEVID";
+            string sql1 = "delete devappr where DEVID=:DEVID";
 
             OracleParameter[] paras = new OracleParameter[]{  
-                new OracleParameter("DEVID",devId),
-                new OracleParameter("DEVIDNUM",OracleType.NVarChar,50,ParameterDirection.Output,"",DataRowVersion.Default,true,"")
-                //DBOperator.SPWrite.MakeOutParam("DEVIDNUM",DbType.String, 50) 
+                new OracleParameter("DEVID",devId)
             };
             try
             {
-                OrclHelper.SSOWrite.ExecuteNonQuery(sql, CommandType.Text, paras);
+                OrclHelper.SSOWrite.ExecuteTransSql(new List<string> { sql, sql1 }, new List<OracleParameter[]> { paras, paras });
                 if (Convert.ToInt32(paras[1].Value) == 0)
                 {
                     return 1;
@@ -290,7 +283,7 @@ namespace Mdl.SSO
             }
             catch (Exception ex)
             {
-                Syn.Utility.Log.WriteErrorLog(ex, "乙丛涛", "删除开发者");
+                Syn.Utility.Log.WriteErrorLog(ex, "刘金保", "删除开发者");
                 return -1;
             }
         }
