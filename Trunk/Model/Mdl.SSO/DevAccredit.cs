@@ -6,6 +6,7 @@ using Syn.Utility.DBHelper;
 using System.Data;
 using System.Data.Common;
 using System.Data.OracleClient;
+using System.Web;
 
 namespace Mdl.SSO
 {
@@ -24,7 +25,6 @@ namespace Mdl.SSO
         public DataTable SelectAppList(ref int curPage, int pageSize, out int totalCount)
         {
             DataTable dt = null;
-
             Syn.Utility.Function.fenye fenyepage = new Syn.Utility.Function.fenye();
 
             string where = " ";//条件语句部分

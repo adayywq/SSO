@@ -29,11 +29,13 @@ namespace Syn.SSO.Controllers
             }
             Session["ReturnUrl"] = returnUrl;
 
-
-            HttpCookie cookieUser = (Request.Cookies["sso_user"] == null) ? new HttpCookie("sso_user") : Request.Cookies["sso_user"];
-            if (!String.IsNullOrEmpty(cookieUser.Values["sk"]))
+            string userInfo = HttpContext.User.Identity.Name;
+            //HttpCookie cookieUser = (Request.Cookies["sso_user"] == null) ? new HttpCookie("sso_user") : Request.Cookies["sso_user"];
+            //if (!String.IsNullOrEmpty(cookieUser.Values["sk"]))
+            if (!String.IsNullOrEmpty(userInfo))
             {
-                string sk = cookieUser.Values["sk"];
+                //string sk = cookieUser.Values["sk"];
+                string sk = userInfo.Split('|')[1];
                 string loginState = (new Mdl.SSO.SsoUser()).LoginVerify(devCode, sk);
                 if (loginState.Contains("100|succeed"))
                 {
@@ -99,12 +101,11 @@ namespace Syn.SSO.Controllers
                             Response.Cookies.Set(cookieCode);
                         }
                         
-                        HttpCookie cookieUser = new HttpCookie("sso_user");
-                        cookieUser.Values.Add("sk", sk);
-                        //cookieUser.Values.Add("name", Url.Encode(mdlSsoUser.Name));
-                        Response.Cookies.Add(cookieUser);
+                        //HttpCookie cookieUser = new HttpCookie("sso_user");
+                        //cookieUser.Values.Add("sk", sk);
+                        //Response.Cookies.Add(cookieUser);
 
-                        FormsAuthentication.SetAuthCookie(mdlSsoUser.UserId + "|" + mdlSsoUser.Name, false);
+                        FormsAuthentication.SetAuthCookie(mdlSsoUser.UserId + "|" + sk + "|" + mdlSsoUser.Name, false);
                         return (new RedirectResult("/Manage/Main"));
                     }
                     else

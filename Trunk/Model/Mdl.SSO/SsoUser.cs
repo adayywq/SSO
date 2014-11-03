@@ -142,14 +142,14 @@ namespace Mdl.SSO
                     return "200|failed";
                 }
             }
-
+            
             //删除cookie
-            HttpCookie cookieUser = HttpContext.Current.Request.Cookies["sso_user"];
-            if (cookieUser != null)
-            {
-                cookieUser.Expires = DateTime.Now.AddDays(-1);
-                HttpContext.Current.Response.SetCookie(cookieUser);
-            }
+            //HttpCookie cookieUser = HttpContext.Current.Request.Cookies["sso_user"];
+            //if (cookieUser != null)
+            //{
+            //    cookieUser.Expires = DateTime.Now.AddDays(-1);
+            //    HttpContext.Current.Response.SetCookie(cookieUser);
+            //}
 
             FormsAuthentication.SignOut();
             
