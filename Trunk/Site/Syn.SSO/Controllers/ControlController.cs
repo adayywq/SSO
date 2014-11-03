@@ -31,7 +31,7 @@ namespace Syn.SSO.Controllers
             //
             //Syn.Special.Pagination fenyepage = new Syn.Special.Pagination();
             //int count = fenyepage.fenyecount("Message  M inner join Usermessage U on M.MessID=U.MessID ", "m.messid", " M.State=1 and U.State =1 and Recipient='" + mdl.UserId + "'");//表名  字段  
-            //ViewData["Headname"] = mdl.Name;
+            ViewData["Headname"] = System.Web.HttpContext.Current.User.Identity.Name.Split('|')[2];
             ViewData["titname"] = ConfigurationManager.AppSettings["Title"].ToString();
             ViewData["SubTitle"] = ConfigurationManager.AppSettings["SubTitle"].ToString();
             //
